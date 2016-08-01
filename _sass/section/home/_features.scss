@@ -1,0 +1,155 @@
+// Import
+
+@import '../../variable/dimension';
+
+// Features
+
+.features {
+
+    // Style
+
+    color: #333;
+
+    // Box
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    // Containers
+
+    .feature {
+
+        // Style
+
+        border-bottom: 1px solid #ccc;
+        padding: $d-pad-l;
+        width: ($d-content-x - (2 * $d-pad-l));
+
+        &:last-child {
+            border-bottom: 0px solid #ccc;
+        }
+
+        // Headings
+
+        h1 {
+
+            // Style
+            
+            color: $c-p2;
+            font-size: 30px;
+            font-weight: $f-weight-m;
+            margin-bottom: $d-pad-s;
+            
+        }
+
+        // Paragraphs
+
+        p {
+
+            // Style
+            
+            line-height: $f-height-b;
+            width: 380px;
+        }
+
+        // Code
+
+        .highlight {
+
+            // Style
+
+            //background-color: #eee;
+            //padding: 20px 40px;
+            //margin: 0 -40px;
+            width: 420px;
+        }
+        
+        pre, code {
+            
+            // Style
+            
+            font-family: $f-family-code;
+            font-size: 13px;
+            margin: 0;
+            padding: 0;
+        }
+
+        // Alternation
+        
+        &.left {
+            p {
+                float: left;
+            }
+
+            .highlight {
+                //border-left: 1px solid #ccc;
+                float: right;
+            }
+        }
+
+        &.right {
+            h1 {
+                text-align: right;
+            }
+            
+            p {
+                float: right;
+                text-align: right;
+            }
+
+            .highlight {
+                //border-right: 1px solid #ccc;
+                float: left;
+            }
+        }
+    }
+
+    .prompt {
+
+        // Style
+
+        border-bottom: 1px solid #ccc;
+        padding: $d-pad-l;
+        width: ($d-content-x - (2 * $d-pad-l));
+
+        &:last-child {
+            border-bottom: 0px solid #ccc;
+        }
+
+        // Box
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        // Paragraphs
+        
+        p {
+            margin: 0;
+        }
+
+        a {
+
+            // Style
+            
+            background-color: $c-p2;
+            color: #fff;
+            display: block;
+            margin-top: $d-pad-s;
+            padding: $d-pad-s $d-pad-l;
+            text-decoration: none;
+
+            // States
+
+            &:hover {
+
+                // Style
+
+                background-color: $c-p1;
+
+            }
+        }
+    }
+}

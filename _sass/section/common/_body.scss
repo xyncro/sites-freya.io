@@ -1,0 +1,23 @@
+// Imports
+
+@import '../../variable/colour';
+@import '../../variable/font';
+
+// Body
+
+body {
+
+    // Style
+    
+    background-color: $c-bg;
+    font-family: $f-family-sans;
+    font-weight: $f-weight-m;
+    font-size: $f-size-b;
+    
+    // Box
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}

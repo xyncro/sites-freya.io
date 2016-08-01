@@ -1,0 +1,37 @@
+---
+freya: scss
+---
+
+// Utilities
+
+// Reset
+
+@import 'utility/reset';
+
+// Variables
+
+// Fonts
+
+@import 'variable/font-family';
+
+// Sections
+
+// Common
+
+@import 'section/common/body';
+@import 'section/common/code';
+@import 'section/common/header';
+@import 'section/common/footer';
+
+// Home
+
+@import 'section/home/features';
+@import 'section/home/splash';
+
+// Documentation
+
+@import 'section/documentation/article';
+@import 'section/documentation/breadcrumb';
+@import 'section/documentation/content';
+@import 'section/documentation/directional';
+@import 'section/documentation/main';

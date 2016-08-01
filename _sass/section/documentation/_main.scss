@@ -1,0 +1,26 @@
+// Import
+
+@import '../../variable/dimension';
+
+// Main
+
+.main {
+
+    // Variables
+
+    $d-header: $d-header-m + $d-header-y;
+    $d-bars: $d-bar-y * 2;
+    
+    // Style
+    
+    width: 100%;
+    
+    // Position
+
+    margin-top: $d-header + $d-bars;
+
+    // Box
+
+    display: flex;
+    justify-content: center;
+}

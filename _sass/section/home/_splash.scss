@@ -1,0 +1,68 @@
+// Import
+
+@import '../../variable/colour';
+@import '../../variable/dimension';
+@import '../../variable/font';
+
+// Splash
+
+.splash {
+
+    // Variables
+
+    $d-header: $d-header-m + $d-header-y;
+
+    // Mixins
+
+    @mixin glow($radius) {
+        text-shadow: 0 0 $radius rgba(255, 255, 255, 0.3);
+    }
+
+    // Style
+
+    background-image: linear-gradient($c-p1, $c-p2);
+    color: $c-bg;
+    text-transform: lowercase;
+    width: 100%;
+
+    // Position
+
+    height: 400px;
+    margin-top: $d-header;
+    padding: $d-pad-s 0 ($d-header / 2) 0;
+    
+    // Box
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    // Elements
+
+    h1 {
+        @include glow(20px);
+        
+        font-family: $f-family-mono;
+        font-size: 100px;
+        font-weight: $f-weight-m;
+        margin-bottom: $d-pad-l + $d-pad-s;
+
+        &:after {
+            content: " {...}";
+        }
+    }
+
+    h2 {
+        @include glow(5px);
+        
+        font-size: $f-size-s1;
+        font-weight: $f-weight-l;
+        line-height: $d-pad-l;
+        text-align: center;
+
+        strong {
+            font-weight: $f-weight-h;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+// Import
+
+@import '../../variable/dimension';
+@import '../../variable/font';
+
+// Footer
+
+footer {
+
+    // Style
+
+    background-color: #eee;
+    line-height: $f-height-b;
+    width: 100%;
+
+    // Box
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    // Containers
+
+    nav {
+
+        width: 100%;
+        
+        // Box
+        
+        display: flex;
+        justify-content: center;
+    }
+    
+    ul {
+
+        // Style
+        
+        padding: $d-pad-l;
+        width: ($d-content-x / 4) - (2 * $d-pad-l);
+    }
+
+    p {
+
+        // Style
+
+        background-color: #ddd;
+        border-bottom: 10px solid #ccc;
+        color: #999;
+        line-height: $f-height-b;
+        margin: 0;
+        padding: $d-pad-l 0;
+        text-align: center;
+        width: 100%;
+
+        // Links
+
+        a {
+
+            // Style
+
+            color: #666;
+            
+        }
+    }
+
+    // Links
+
+    a {
+        
+        // Style
+
+        color: #999;
+        text-decoration: none;
+
+        // States
+
+        &:hover {
+            color: #333;
+        }
+    }
+
+    ul:first-child a {
+
+        // Style
+        
+        color: #666;
+        font-weight: $f-weight-h;
+
+        // States
+        
+        &:hover {
+            color: #000;
+        }
+    }
+}

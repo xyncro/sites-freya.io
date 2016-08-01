@@ -1,0 +1,93 @@
+// Import
+
+@import '../../variable/dimension';
+
+// Directional
+
+.directional {
+
+    // Variables
+
+    $d-header: $d-header-m + $d-header-y;
+    $d-bar: $d-bar-y;
+
+    // Style
+
+    background-color: #eee;
+    height: $d-bar-y;
+    width: 100%;
+    
+    // Position
+
+    position: fixed;
+    top: $d-header + $d-bar;
+    left: 0;
+
+    // Box
+
+    display: flex;
+    justify-content: center;
+    
+    // Containers
+    
+    ul {
+
+        // Style
+        
+        list-style-type: none;
+        width: $d-content-x;
+        
+        // Box
+
+        display: flex;
+
+    }
+        
+    li {
+        
+        // Variables
+        
+        $m: $d-pad-l - $d-pad-xs;
+        
+        // Style
+        
+        margin-right: $m;
+        width: $d-content-x / 2 - $m;
+        
+        // Box
+        
+        display: flex;
+        justify-content: flex-end;
+        
+        // Selectors
+        
+        &:first-child {
+            margin-left: $m;
+            margin-right: 0;
+            justify-content: flex-start;
+        }            
+    }
+
+    // Links
+    
+    a {
+
+        // Style
+
+        color: #999;
+        padding: 0 $d-pad-xs;
+        text-decoration: none;
+
+        // Box
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // States
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}

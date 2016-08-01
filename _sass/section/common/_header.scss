@@ -1,0 +1,89 @@
+// Import
+
+@import '../../variable/colour';
+@import '../../variable/dimension';
+@import '../../variable/font';
+
+// Header
+
+header {
+
+    // Variables
+
+    $h: 160px;
+    
+    // Mixins
+
+    @mixin emphasis($emphasis) {
+        background-color: lighten($c-p1, $emphasis * 5%);
+        border-top: $d-pad-xs solid lighten($c-p1, $emphasis * 5 - 5%);
+        margin-top: - $d-pad-xs;
+    }
+
+    // Style
+    
+    background-color: $c-p1;
+    border-top: $d-pad-xs solid darken($c-p1, 5%);
+    text-transform: lowercase;
+
+    // Position
+    
+    min-height: $d-header-y;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    
+    // Box
+
+    display: flex;
+    justify-content: center;
+    
+    // Containers
+    
+    h1, nav, ul, li {
+        display: flex;
+    }
+
+    h1 {
+        font-size: $f-size-b;
+        font-weight: $f-weight-h;
+        width: $h;
+    }
+
+    ul {
+        list-style: none;
+    }
+    
+    nav {
+        justify-content: flex-end;
+        width: $d-content-x - $h;
+    }
+
+    // Links
+    
+    a {
+
+        // Style
+        
+        color: $c-bg;
+        padding: 0 $d-pad-l $d-header-m / 2 $d-pad-l;
+        text-decoration: none;
+
+        // Box
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // States
+        
+        &.current {
+            @include emphasis(2);
+        }
+        
+        &:hover {
+            @include emphasis(1);
+        }
+    }
+}
