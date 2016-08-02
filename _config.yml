@@ -5,6 +5,36 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
+# Exclusions (Sphinx Content)
+
+exclude: [
+
+  # Common
+
+  LICENSE.md,
+  README.md,
+
+  # Jekyll
+  
+  Gemfile,
+  Gemfile.lock,
+
+  # Sphinx
+
+  _themes,
+  conf.py,
+  Makefile,
+
+  index.rst,
+  meta,
+  recipes,
+  reference,
+  topics,
+  tutorials
+
+]
+
+
 # Site settings
 title: Your awesome title
 email: your-email@domain.com

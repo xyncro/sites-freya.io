@@ -2,22 +2,101 @@
 layout: default
 ---
 
-<div class="home">
+<section class="splash">
+  <h1>Freya</h1>
+  <h2>Elegant. Modern. <strong>Powerful.</strong><br />Functional Web Programming <strong>for F#.</strong></h2>
+</section>
 
-  <h1 class="page-heading">Posts</h1>
+<section class="features">
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <section class="prompt">
+    <p>Looking to <strong>dive straight in?</strong> Get started with Freya now.</p>
+    <p><a href="#">Getting Started</a></p>
+  </section>
+  <section class="feature left">
+    <h1>Purely Functional</h1>
+    <p>Freya is a modern, purely functional stack for web programming in F#. Familiar functional programming techniques for state and concurrency are combined to give you a consistent and seamless approach to building web applications.</p>
+    <div class="highlight">
+      <pre>let ok =
+    freya {
+        do! Response.statusCode .= Some 200
+        do! Response.reasonPhrase .= Some "OK" }</pre>
+    </div>
+  </section>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <section class="feature right">
+    <h1>Typesafe Modelling</h1>
+    <p>The powerful and comprehensive type systems available with Freya help you build safe and composable application components. Types for HTTP and surrounding standards give you the tools you need to make the most of the web.
+    </p>
+    <div class="highlight">
+      <pre>let ok =
+    freya {
+        do! Response.statusCode .= Some 200
+        do! Response.reasonPhrase .= Some "OK" }</pre>
+    </div>
+  </section>
+  
+  <section class="feature left">
+    <h1>High Level HTTP Abstractions</h1>
+    <p>The Freya Machine abstraction gives you an amazingly powerful and functional approach to build HTTP applications. Build complex HTTP applications from smaller, composable, re-usable elements. 
+    </p>
+    <div class="highlight">
+      <pre>let users =
+    freyaMachine {
+        methods [ GET; OPTIONS; POST ]
+        availableMediaTypes MediaType.json
+        doPost createUser
+        handleOk listUsers }</pre>
+    </div>
+  </section>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <section class="prompt">
+    <p>Ready to give Freya a try? You could be <strong>up and running in minutes.</strong></p>
+    <p><a href="#">Getting Started</a></p>
+  </section>
 
-</div>
+  <section class="feature right">
+    <h1>Powerful Routing</h1>
+    <p>Routing based on flexible and relevant web standards &mdash; URI Templates &mdash; allows you to create fast and accurate routing with a consistent data model, and re-use routes for matching, URI generation and more.
+    </p>
+    <div class="highlight">
+      <pre>let routes =
+    freyaRouter {
+        route GET "/" home
+        resource  "/api/users" users
+        resource  "/api/users/{id}" user }</pre>
+    </div>
+  </section>
+
+  <section class="feature left">
+    <h1>Extensible and Composable Stack</h1>
+    <p>Design to support building abstractions at successviely higher levels enables building complex applications at the right level of detail and control. Build your own abstractions to boost your productivity.
+    </p>
+    <div class="highlight">
+      <pre>let routes =
+    freyaRouter {
+        route GET "/" home
+        resource  "/api/users" users
+        resource  "/api/users/{id}" user }</pre>
+    </div>
+  </section>
+
+  <section class="feature right">
+    <h1>Open Standards and Compatibility</h1>
+    <p>Design to support building abstractions at successviely higher levels enables building complex applications at the right level of detail and control. Build your own abstractions to boost your productivity.
+    </p>
+    <div class="highlight">
+      <pre>let routes =
+    freyaRouter {
+        route GET "/" home
+        resource  "/api/users" users
+        resource  "/api/users/{id}" user }</pre>
+    </div>
+  </section>
+
+  <section class="prompt">
+    <p>Still <strong>need more convincing?</strong> Come and chat about whether Freya is <strong>right for you...</strong></p>
+    <p><a href="#">Community</a></p>
+  </section>
+
+</section>
