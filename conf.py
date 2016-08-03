@@ -35,7 +35,7 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+# templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -77,7 +77,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['.git', '_build', '_site']
+exclude_patterns = ['.git', '_*', 'blog']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -117,7 +117,7 @@ todo_include_todos = True
 # if not on_rtd:
 #    import sphinx_rtd_theme
 
-html_theme = '_themes'
+html_theme = '_templates'
 html_theme_path = ['.']
 
 #    html_theme = 'sphinx_rtd_theme'

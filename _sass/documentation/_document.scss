@@ -3,16 +3,17 @@
 @import '../dimension';
 @import '../font';
 
-// Article
+// Document
 
-article {
+.document {
 
     // Style
     
     color: #333;
     line-height: $f-height-b;
-    padding: $d-pad-l;
-    width: 580px;
+    margin-left: $d-pad-s;
+    padding: $d-pad-l $d-pad-s;
+    width: $d-content-x - 300px - (2 * $d-pad-s) - $d-pad-s;
 
     // Headings
 
@@ -173,8 +174,6 @@ article {
     }
 
     // Code
-
-    @import '../common/code';
 
     .highlight {
 

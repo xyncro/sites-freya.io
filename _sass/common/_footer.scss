@@ -5,7 +5,7 @@
 
 // Footer
 
-footer {
+body > footer {
 
     // Style
 
@@ -35,8 +35,8 @@ footer {
 
         // Style
         
-        padding: $d-pad-l;
-        width: ($d-content-x / 4) - (2 * $d-pad-l);
+        padding: $d-pad-l $d-pad-s;
+        width: ($d-content-x / 4) - (2 * $d-pad-s);
     }
 
     p {

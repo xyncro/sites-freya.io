@@ -24,8 +24,8 @@
         // Style
 
         border-bottom: 1px solid #ccc;
-        padding: $d-pad-l;
-        width: ($d-content-x - (2 * $d-pad-l));
+        padding: $d-pad-l $d-pad-s;
+        width: $d-content-x - (2 * $d-pad-s);
 
         &:last-child {
             border-bottom: 0px solid #ccc;
@@ -51,7 +51,7 @@
             // Style
             
             line-height: $f-height-b;
-            width: 380px;
+            width: ($d-content-x / 2) - (2 * $d-pad-s) - $d-pad-s;
         }
 
         // Code
@@ -60,7 +60,7 @@
 
             // Style
 
-            width: 420px;
+            width: ($d-content-x / 2) - (2 * $d-pad-s) - $d-pad-s;
         }
         
         pre {

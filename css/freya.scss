@@ -22,10 +22,15 @@ freya: scss
 @import 'core/features';
 @import 'core/splash';
 
+// Blog
+
+@import 'blog/summaries';
+@import 'blog/summary';
+
 // Documentation
 
-@import 'documentation/article';
 @import 'documentation/breadcrumb';
 @import 'documentation/content';
 @import 'documentation/directional';
+@import 'documentation/document';
 @import 'documentation/main';

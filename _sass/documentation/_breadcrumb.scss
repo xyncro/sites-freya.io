@@ -41,12 +41,7 @@
         display: flex;
         
         li {
-            display: flex;
-
-            &:first-child {
-                margin-left: $d-pad-s;
-            }
-            
+            display: flex;            
         }
     }
 

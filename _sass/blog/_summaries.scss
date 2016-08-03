@@ -1,0 +1,21 @@
+// Import
+
+@import '../colour';
+@import '../dimension';
+
+.summaries {
+
+    // Style
+    
+    margin-top: $d-header-m + $d-header-y;
+    padding: $d-pad-l $d-pad-s;
+    width: $d-content-x - (2 * $d-pad-s);
+
+    // Headings
+
+    h1 {
+        color: $c-p2;
+        font-size: 30px;
+        font-weight: $f-weight-m;
+    }
+}

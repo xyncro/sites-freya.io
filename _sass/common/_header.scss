@@ -6,7 +6,7 @@
 
 // Header
 
-header {
+body > header {
 
     // Variables
 
@@ -57,7 +57,7 @@ header {
     
     nav {
         justify-content: flex-end;
-        width: $d-content-x - $h - (2 * $d-pad-s);
+        width: $d-content-x - $h;
     }
 
     // Links
