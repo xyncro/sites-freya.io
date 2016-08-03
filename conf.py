@@ -117,7 +117,7 @@ todo_include_todos = True
 # if not on_rtd:
 #    import sphinx_rtd_theme
 
-html_theme = '_theme'
+html_theme = '_themes'
 html_theme_path = ['.']
 
 #    html_theme = 'sphinx_rtd_theme'
