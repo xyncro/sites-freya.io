@@ -21,6 +21,7 @@ exclude: [
 
   # Sphinx
 
+  _static,
   _themes,
   conf.py,
   Makefile,
@@ -34,6 +35,14 @@ exclude: [
 
 ]
 
+# URLs
+
+urls:
+  freya:
+    docs: http://localhost:8000
+    # docs: https://docs.freya.io
+    git: https://github.com/xyncro/freya
+    twitter: https://twitter.com/freyafs
 
 # Site settings
 title: Your awesome title

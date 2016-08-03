@@ -11,16 +11,16 @@ layout: default
 
   <section class="prompt">
     <p>Looking to <strong>dive straight in?</strong> Get started with Freya now.</p>
-    <p><a href="#">Getting Started</a></p>
+    <p><a href="{{ site.urls.freya.docs }}/en/latest/getting-started.html">Getting Started</a></p>
   </section>
   <section class="feature left">
     <h1>Purely Functional</h1>
     <p>Freya is a modern, purely functional stack for web programming in F#. Familiar functional programming techniques for state and concurrency are combined to give you a consistent and seamless approach to building web applications.</p>
     <div class="highlight">
-      <pre>let ok =
-    freya {
-        do! Response.statusCode .= Some 200
-        do! Response.reasonPhrase .= Some "OK" }</pre>
+      <pre><span></span><span class="k">let</span> <span class="nv">ok</span> <span class="o">=</span>
+    <span class="k">freya</span> <span class="o">{</span>
+        <span class="k">do</span><span class="o">!</span> <span class="nn">Response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">.=</span> <span class="n">Some</span> <span class="mi">200</span>
+        <span class="k">do</span><span class="o">!</span> <span class="nn">Response</span><span class="p">.</span><span class="n">reasonPhrase</span> <span class="o">.=</span> <span class="n">Some</span> <span class="s">&quot;OK&quot;</span> <span class="o">}</span></pre>
     </div>
   </section>
 
@@ -41,18 +41,18 @@ layout: default
     <p>The Freya Machine abstraction gives you an amazingly powerful and functional approach to build HTTP applications. Build complex HTTP applications from smaller, composable, re-usable elements. 
     </p>
     <div class="highlight">
-      <pre>let users =
-    freyaMachine {
-        methods [ GET; OPTIONS; POST ]
-        availableMediaTypes MediaType.json
-        doPost createUser
-        handleOk listUsers }</pre>
+      <pre><span></span><span class="k">let</span> <span class="nv">users</span> <span class="o">=</span>
+    <span class="k">freyaMachine</span> <span class="o">{</span>
+        <span class="k">methods</span> <span class="o">[</span> <span class="n">GET</span><span class="o">;</span> <span class="n">OPTIONS</span><span class="o">;</span> <span class="n">POST</span> <span class="o">]</span>
+        <span class="k">availableMediaTypes</span> <span class="nn">MediaType</span><span class="p">.</span><span class="n">json</span>
+        <span class="k">doPost</span> <span class="n">createUser</span>
+        <span class="k">handleOk</span> <span class="n">listUsers</span> <span class="o">}</span></pre>
     </div>
   </section>
 
   <section class="prompt">
     <p>Ready to give Freya a try? You could be <strong>up and running in minutes.</strong></p>
-    <p><a href="#">Getting Started</a></p>
+    <p><a href="{{ site.urls.freya.docs }}/en/latest/getting-started.html">Getting Started</a></p>
   </section>
 
   <section class="feature right">
@@ -60,11 +60,11 @@ layout: default
     <p>Routing based on flexible and relevant web standards &mdash; URI Templates &mdash; allows you to create fast and accurate routing with a consistent data model, and re-use routes for matching, URI generation and more.
     </p>
     <div class="highlight">
-      <pre>let routes =
-    freyaRouter {
-        route GET "/" home
-        resource  "/api/users" users
-        resource  "/api/users/{id}" user }</pre>
+      <pre><span></span><span class="k">let</span> <span class="nv">routes</span> <span class="o">=</span>
+    <span class="k">freyaRouter</span> <span class="o">{</span>
+        <span class="k">route</span> <span class="n">GET</span> <span class="s">&quot;/&quot;</span> <span class="n">home</span>
+        <span class="k">resource</span>  <span class="s">&quot;/api/users&quot;</span> <span class="n">users</span>
+        <span class="k">resource</span>  <span class="s">&quot;/api/users/{id}&quot;</span> <span class="n">user</span> <span class="o">}</span></pre>
     </div>
   </section>
 
@@ -96,7 +96,7 @@ layout: default
 
   <section class="prompt">
     <p>Still <strong>need more convincing?</strong> Come and chat about whether Freya is <strong>right for you...</strong></p>
-    <p><a href="#">Community</a></p>
+    <p><a href="{{ site.urls.freya.docs }}/en/latest/community.html">Community</a></p>
   </section>
 
 </section>

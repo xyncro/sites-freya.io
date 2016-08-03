@@ -2,36 +2,30 @@
 freya: scss
 ---
 
-// Utilities
+// Fonts
+
+@import 'https://fonts.googleapis.com/css?family=Inconsolata|Roboto:100,300,400|Source+Code+Pro:300,400';
 
 // Reset
 
-@import 'utility/reset';
-
-// Variables
-
-// Fonts
-
-@import 'variable/font-family';
-
-// Sections
+@import 'reset';
 
 // Common
 
-@import 'section/common/body';
-@import 'section/common/code';
-@import 'section/common/header';
-@import 'section/common/footer';
+@import 'common/body';
+@import 'common/code';
+@import 'common/header';
+@import 'common/footer';
 
-// Home
+// Core
 
-@import 'section/home/features';
-@import 'section/home/splash';
+@import 'core/features';
+@import 'core/splash';
 
 // Documentation
 
-@import 'section/documentation/article';
-@import 'section/documentation/breadcrumb';
-@import 'section/documentation/content';
-@import 'section/documentation/directional';
-@import 'section/documentation/main';
+@import 'documentation/article';
+@import 'documentation/breadcrumb';
+@import 'documentation/content';
+@import 'documentation/directional';
+@import 'documentation/main';

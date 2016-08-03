@@ -31,6 +31,7 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
    :hidden:
 
    self
+   getting-started
    meta/index
 
 .. toctree::

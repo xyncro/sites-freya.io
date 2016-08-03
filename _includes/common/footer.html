@@ -1,18 +1,18 @@
 <footer>
   <nav>
     <ul>
-      <li><a href="https://freya.io">Freya</a></li>
+      <li><a href="{{ theme_urls_freya_core }}/">Freya</a></li>
     </ul>
     <ul>
-      <li><a href="https://github.com/xyncro/freya">GitHub</a></li>
-      <li><a href="https://twitter.com/freyafs">Twitter</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.git }}{% endif %}{{ theme_urls_freya_git }}">GitHub</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.twitter }}{% endif %}{{ theme_urls_freya_twitter }}">Twitter</a></li>
       <li><a href="https://gitter.im/xyncro/freya">Gitter</a></li>
     </ul>
     <ul>
-      <li><a href="https://freya.io/blog">Blog</a></li>
-      <li><a href="https://docs.freya.io/en/latest/contact.html">Contact</a></li>
-      <li><a href="https://docs.freya.io/en/latest/community.html">Community</a></li>          
-      <li><a href="https://docs.freya.io/en/latest/policies.html">Policies</a></li>          
+      <li><a href="{{ theme_urls_freya_core }}/blog">Blog</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/meta/contact.html">Contact</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/meta/community.html">Community</a></li>          
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/meta/policies.html">Policies</a></li>          
     </ul>
     <ul>
       <li><a href="https://xyncro.tech">Xyncro Open Source</a></li>

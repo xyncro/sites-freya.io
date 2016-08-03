@@ -1,6 +1,6 @@
 // Import
 
-@import '../../variable/dimension';
+@import '../dimension';
 
 // Directional
 
@@ -45,14 +45,10 @@
         
     li {
         
-        // Variables
-        
-        $m: $d-pad-l - $d-pad-xs;
-        
         // Style
         
-        margin-right: $m;
-        width: $d-content-x / 2 - $m;
+        margin-right: $d-pad-s;
+        width: $d-content-x / 2 - $d-pad-s;
         
         // Box
         
@@ -62,7 +58,7 @@
         // Selectors
         
         &:first-child {
-            margin-left: $m;
+            margin-left: $d-pad-s;
             margin-right: 0;
             justify-content: flex-start;
         }            
@@ -75,7 +71,7 @@
         // Style
 
         color: #999;
-        padding: 0 $d-pad-xs;
+        padding: 0 $d-pad-s;
         text-decoration: none;
 
         // Box

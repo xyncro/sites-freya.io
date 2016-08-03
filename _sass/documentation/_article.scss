@@ -1,7 +1,7 @@
 // Import
 
-@import '../../variable/dimension';
-@import '../../variable/font';
+@import '../dimension';
+@import '../font';
 
 // Article
 
@@ -191,7 +191,8 @@ article {
         // Style
 
         font-family: $f-family-code;
-        font-size: 13px; //$f-size-b;
+        font-size: 13px;
+        font-weight: 300; //$f-weight-h;
     }
 
     code {
@@ -208,7 +209,7 @@ article {
 
         // Style
 
-        line-height: $f-height-b;
+        line-height: 25px; //$f-height-b;
         margin: 0;
         padding: 0;
     }

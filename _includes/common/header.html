@@ -1,13 +1,14 @@
 <header>
   <h1>
-    <a href="https://freya.io">Freya</a>
+    <a href="{{ theme_urls_freya_core }}/">Freya</a>
   </h1>
   <nav>
     <ul>
-      <li><a href="https://freya.io/blog">Blog</a></li>
-      <li><a href="https://docs.freya.io">Documentation</a></li>
-      <li><a href="https://docs.freya.io/meta/community.html">Community</a></li>
-      <li><a href="https://github.com/xyncro/freya">GitHub</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/getting-started.html">Getting Started</a></li>
+      <li><a href="{{ theme_urls_freya_core }}/blog">Blog</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/">Documentation</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/meta/community.html">Community</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.git }}{% endif %}{{ theme_urls_freya_git }}">Code</a></li>
     </ul>
   </nav>
 </header>
