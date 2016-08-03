@@ -31,7 +31,6 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
    :hidden:
 
    self
-   getting-started
    meta/index
 
 .. toctree::
@@ -40,6 +39,7 @@ Contributions to Freya (in any form) are very much welcomed, and if you wish to 
    :includehidden:
 
    Overview <topics/index>
+   topics/getting-started
    topics/general
    topics/design
    topics/standards
