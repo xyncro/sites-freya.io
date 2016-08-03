@@ -3,19 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>{{ title | striptags | e }} &mdash; Freya</title>
-    {% include "../_includes/common/links.html" %}
+    {% include "common/links.html" %}
   </head>
   <body>
-    {% include "../_includes/common/header.html" %}
-    {% include "../_includes/documentation/navigation/breadcrumb.html" %}
-    {% include "../_includes/documentation/navigation/directional.html" %}
+    {% include "common/header.html" %}
+    {% include "documentation/navigation/breadcrumb.html" %}
+    {% include "documentation/navigation/directional.html" %}
     <section class="main">
-      {% include "../_includes/documentation/navigation/content.html" %}
+      {% include "documentation/navigation/content.html" %}
       <article class="document">
         {% block body %}{% endblock %}
       </article>
     </section>
-    {% include "../_includes/common/footer.html" %}
+    {% include "common/footer.html" %}
     {# include "includes/meta/version.html" #}
     {# include "includes/meta/edit.html" #}
     {# include "includes/search/search.html" #}
