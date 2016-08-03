@@ -63,13 +63,14 @@
             width: 420px;
         }
         
-        pre, code {
+        pre {
             
             // Style
             
             font-family: $f-family-code;
             font-size: 13px;
-            font-weight: $f-weight-h;
+            font-weight: $f-weight-m;
+            line-height: 18px;
             margin: 0;
             padding: 0;
         }

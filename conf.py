@@ -117,8 +117,8 @@ todo_include_todos = True
 # if not on_rtd:
 #    import sphinx_rtd_theme
 
-html_theme = 'freya'
-html_theme_path = ['_themes']
+html_theme = '_theme'
+html_theme_path = ['.']
 
 #    html_theme = 'sphinx_rtd_theme'
 #    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]

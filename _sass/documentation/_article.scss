@@ -192,7 +192,7 @@ article {
 
         font-family: $f-family-code;
         font-size: 13px;
-        font-weight: 300; //$f-weight-h;
+        font-weight: $f-weight-m;
     }
 
     code {
@@ -209,7 +209,7 @@ article {
 
         // Style
 
-        line-height: 25px; //$f-height-b;
+        line-height: 18px;
         margin: 0;
         padding: 0;
     }

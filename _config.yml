@@ -21,8 +21,7 @@ exclude: [
 
   # Sphinx
 
-  _static,
-  _themes,
+  _theme,
   conf.py,
   Makefile,
 
