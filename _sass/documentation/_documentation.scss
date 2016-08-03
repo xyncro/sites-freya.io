@@ -2,9 +2,9 @@
 
 @import '../dimension';
 
-// Main
+// Documentation
 
-.main {
+.documentation {
 
     // Variables
 
@@ -13,7 +13,7 @@
     
     // Style
     
-    width: 100%;
+    width: $d-content-x;
     
     // Position
 
@@ -22,5 +22,4 @@
     // Box
 
     display: flex;
-    justify-content: center;
 }
