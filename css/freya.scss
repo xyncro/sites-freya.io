@@ -18,11 +18,6 @@ freya: scss
 @import 'common/footer';
 @import 'common/navigation/directional';
 
-// Core
-
-@import 'core/features';
-@import 'core/splash';
-
 // Blog
 
 @import 'blog/posts';
@@ -34,3 +29,8 @@ freya: scss
 @import 'documentation/documentation';
 @import 'documentation/navigation/breadcrumb';
 @import 'documentation/navigation/content';
+
+// Home
+
+@import 'home/features';
+@import 'home/splash';
