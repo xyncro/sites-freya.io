@@ -16,6 +16,7 @@ freya: scss
 @import 'common/code';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/navigation/directional';
 
 // Core
 
@@ -24,8 +25,8 @@ freya: scss
 
 // Blog
 
-@import 'blog/summaries';
-@import 'blog/summary';
+@import 'blog/posts';
+@import 'blog/post';
 
 // Documentation
 
@@ -33,4 +34,3 @@ freya: scss
 @import 'documentation/documentation';
 @import 'documentation/navigation/breadcrumb';
 @import 'documentation/navigation/content';
-@import 'documentation/navigation/directional';

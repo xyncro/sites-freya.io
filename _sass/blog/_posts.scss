@@ -3,19 +3,22 @@
 @import '../colour';
 @import '../dimension';
 
-.summaries {
+.posts {
 
     // Style
     
     margin-top: $d-header-m + $d-header-y;
-    padding: $d-pad-l $d-pad-s;
-    width: $d-content-x - (2 * $d-pad-s);
+    width: $d-content-x;
 
     // Headings
 
     h1 {
+
+        // Style
+        
         color: $c-p2;
         font-size: 30px;
         font-weight: $f-weight-m;
+        padding: $d-pad-l $d-pad-s $d-pad-s $d-pad-s;
     }
 }

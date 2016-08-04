@@ -1,0 +1,45 @@
+// Import
+
+@import '../dimension';
+
+.summary {
+
+    line-height: $f-height-b;
+    margin-bottom: $d-pad-l;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    header {
+        //background-color: #ddd;
+        padding: 0 $d-pad-s;
+        width: 400px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    footer {
+        //background-color: #bbb;
+        margin-left: 440px;
+        padding: 0 $d-pad-s;
+        width: 480px;
+    }
+
+    section {
+        //background-color: #ccc;
+        padding: 0 $d-pad-s;
+        width: 480px;
+
+        p {
+            margin-bottom: $d-pad-s;
+        }
+    }
+    
+    h1 {
+        font-size: 24px;
+        padding: 0;
+    }    
+}
