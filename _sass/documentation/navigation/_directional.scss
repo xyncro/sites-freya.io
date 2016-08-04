@@ -1,25 +1,26 @@
 // Import
 
-@import '../dimension';
+@import '../../dimension';
 
-// Breadcrumb
+// Directional
 
-.breadcrumb {
+.directional {
 
     // Variables
 
     $d-header: $d-header-m + $d-header-y;
+    $d-bar: $d-bar-y;
 
     // Style
 
-    background-color: #ddd;
+    background-color: #eee;
     height: $d-bar-y;
     width: 100%;
     
     // Position
 
     position: fixed;
-    top: $d-header;
+    top: $d-header + $d-bar;
     left: 0;
 
     // Box
@@ -40,20 +41,36 @@
 
         display: flex;
         
-        li {
-            display: flex;            
-        }
+    }
+        
+    li {
+        
+        // Style
+        
+        width: $d-content-x / 2;
+        
+        // Box
+        
+        display: flex;
+        justify-content: flex-end;
+        
+        // Selectors
+        
+        &:first-child {
+            justify-content: flex-start;
+        }            
     }
 
     // Links
-
+    
     a {
+
         // Style
-        
-        color: #666;
+
+        color: #999;
         padding: 0 $d-pad-s;
         text-decoration: none;
-        
+
         // Box
         
         display: flex;
@@ -63,8 +80,7 @@
         // States
 
         &:hover {
-            background-color: #ccc;
-            color: #666;
+            background-color: #ddd;
         }
     }
 }

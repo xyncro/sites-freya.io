@@ -29,8 +29,8 @@ freya: scss
 
 // Documentation
 
-@import 'documentation/breadcrumb';
-@import 'documentation/content';
-@import 'documentation/directional';
 @import 'documentation/document';
 @import 'documentation/documentation';
+@import 'documentation/navigation/breadcrumb';
+@import 'documentation/navigation/content';
+@import 'documentation/navigation/directional';
