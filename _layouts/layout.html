@@ -7,13 +7,13 @@
     <title>{{ title | striptags | e }} &mdash; Freya</title>
     {% include "common/links.html" %}
   </head>
-  <body>
+  <body class="documentation">
     {% include "common/header.html" %}
     {% include "documentation/navigation/breadcrumb.html" %}
     {% include "common/navigation/directional.html" %}
-    <section class="documentation">
+    <section>
       {% include "documentation/navigation/content.html" %}
-      <article class="document">
+      <article>
         {% block body %}{% endblock %}
       </article>
     </section>

@@ -1,0 +1,147 @@
+@import '../mixins';
+@import '../variables';
+
+// Home
+
+.home {
+
+    // Splash
+    
+    .splash {
+
+        @include flex-column-center;        
+        background-image: linear-gradient($c-p1, $c-p2);
+        color: $c-bg;
+        height: 400px;
+        margin-top: $d-header-m + $d-header-y;
+        padding: $d-pad-m 0 (($d-header-m + $d-header-y) / 2) 0;
+        text-transform: lowercase;
+        width: 100%;
+        
+        // Headers
+
+        @mixin glow($radius) {
+            text-shadow: 0 0 $radius rgba(255, 255, 255, 0.3);
+        }
+        
+        h1 {
+            @include glow(20px);            
+            font-family: $f-family-mono;
+            font-size: 100px;
+            font-weight: $f-weight-m;
+            margin-bottom: $d-pad-l + $d-pad-m;
+            
+            &:after {
+                content: " {...}";
+            }
+        }
+        
+        h2 {
+            @include glow(5px);            
+            font-size: $f-size-s1;
+            font-weight: $f-weight-l;
+            line-height: $d-pad-l;
+            text-align: center;
+            
+            strong {
+                font-weight: $f-weight-h;
+            }
+        }
+    }
+    
+    // Features
+
+    .features {
+
+        @include flex-column-center;
+
+        // Feature/Prompt
+
+        .feature, .prompt {
+            @include container-underlined;
+            width: $d-content-x - (2 * $d-pad-m);
+        }
+
+        // Paragraphs
+
+        p {
+            line-height: $f-height-b;
+        }
+
+        // Feature
+        
+        .feature {
+            
+            // Headings
+            
+            h1 {
+                color: $c-p2;
+                font-size: 30px;
+                font-weight: $f-weight-m;
+                margin-bottom: $d-pad-m;                
+            }
+                        
+            // Paragraphs/Highlight
+            
+            p, .highlight {
+                width: ($d-content-x / 2) - (2 * $d-pad-m) - $d-pad-m;
+            }
+            
+            pre {
+                font-family: $f-family-code;
+                font-size: 13px;
+                font-weight: $f-weight-m;
+                line-height: 18px;
+                margin: 0;
+                padding: 3px 0 0 0;
+            }
+            
+            // Alternation
+
+            @mixin alternate($d1, $d2) {
+                h1 {
+                    text-align: $d1;
+                }
+
+                p {
+                    float: $d1;
+                    text-align: $d1;
+                }
+
+                .highlight {
+                    float: $d2;
+                }                    
+            }
+            
+            &.left {
+                @include alternate(left, right);
+            }
+            
+            &.right {
+                @include alternate(right, left);
+            }
+        }
+
+        // Prompt
+        
+        .prompt {
+            
+            @include flex-column-center;            
+            
+            // Links
+            
+            a {
+                background-color: $c-p2;
+                color: #fff;
+                display: block;
+                margin-top: $d-pad-m;
+                padding: $d-pad-m $d-pad-l;
+                text-decoration: none;
+                
+                &:hover {
+                    background-color: $c-p1;               
+                }
+            }
+        }
+    }
+}

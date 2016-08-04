@@ -1,0 +1,29 @@
+@import 'variables';
+
+// Container
+
+@mixin container-underlined {
+    border-bottom: 1px solid #ccc;
+    padding: $d-pad-l $d-pad-m;
+    
+    &:last-child {
+        border-bottom: 0px solid #ccc;
+    }
+}
+
+// Flex
+
+@mixin flex-center($direction) {
+    align-items: center;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+}
+
+@mixin flex-column-center {
+    @include flex-center(column);
+}
+
+@mixin flex-row-center {
+    @include flex-center(row);
+}

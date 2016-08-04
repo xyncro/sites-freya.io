@@ -1,0 +1,241 @@
+@import '../mixins';
+@import '../variables';
+
+// Common
+
+body {
+
+    @include flex-column-center;
+    background-color: $c-bg;
+    color: #333;
+    font-family: $f-family-sans;
+    font-weight: $f-weight-m;
+    font-size: $f-size-b;
+
+    // Links
+
+    a {
+        text-decoration: none;
+    }
+
+    // Paragraphs
+
+    p {
+        line-height: $f-height-b;
+    } 
+
+    // Header
+    
+    > header {        
+        background-color: $c-p1;
+        border-top: $d-pad-s solid darken($c-p1, 5%);
+        display: flex;
+        height: $d-header-y;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        text-transform: lowercase;
+        top: 0;
+        width: 100%;
+        
+        // Containers
+        
+        h1, nav, ul, li {
+            display: flex;
+        }
+
+        // Headings
+        
+        h1 {
+            font-size: $f-size-b;
+            font-weight: $f-weight-h;
+            width: 160px;
+        }
+
+        // Lists
+        
+        ul {
+            list-style: none;
+        }
+
+        // Navigation
+        
+        nav {
+            justify-content: flex-end;
+            width: $d-content-x - 160px;
+        }
+        
+        // Links
+        
+        a {
+            @include flex-row-center;
+            color: $c-bg;
+            padding: 0 $d-pad-m ($d-header-m / 2) $d-pad-m;
+            
+            @mixin emphasis($emphasis) {
+                background-color: lighten($c-p1, $emphasis * 5%);
+                border-top: $d-pad-s solid lighten($c-p1, $emphasis * 5 - 5%);
+                margin-top: - $d-pad-s;
+            }
+            
+            &:hover {
+                @include emphasis(1);
+            }
+            
+            &.current {
+                @include emphasis(2);
+            }
+        }
+    }
+
+    // Footer
+
+    > footer {
+        @include flex-column-center;
+        background-color: #eee;
+        line-height: $f-height-b;
+        width: 100%;
+    
+        // Nav
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        // Lists
+        
+        ul {
+            padding: $d-pad-l $d-pad-m;
+            width: ($d-content-x / 4) - (2 * $d-pad-m);
+        }
+
+        // Paragraphs
+        
+        p {
+            background-color: #ddd;
+            border-bottom: 10px solid #ccc;
+            color: #999;
+            margin: 0;
+            padding: $d-pad-l 0;
+            text-align: center;
+            width: 100%;
+            
+            // Links
+            
+            a {
+                color: #666;
+            }
+        }
+        
+        // Links
+        
+        a {
+            color: #999;
+            
+            &:hover {
+                color: #333;
+            }
+        }
+        
+        ul:first-child a {
+            color: #666;
+            font-weight: $f-weight-h;
+            
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    // Directional Navigation
+    
+    .directional {
+        
+        // Variables
+        
+        $d-header: $d-header-m + $d-header-y;
+        $d-bar: $d-bar-y;
+        
+        // Style
+        
+        background-color: #eee;
+        height: $d-bar-y;
+        width: 100%;
+        
+        // Position
+        
+        position: fixed;
+        top: $d-header + $d-bar;
+        left: 0;
+        
+        // Box
+        
+        display: flex;
+        justify-content: center;
+        
+        // Containers
+        
+        ul {
+            
+            // Style
+            
+            list-style-type: none;
+            width: $d-content-x;
+            
+            // Box
+            
+            display: flex;
+            
+        }
+        
+        li {
+            
+            // Style
+            
+            width: $d-content-x / 2;
+            
+            // Box
+            
+            display: flex;
+            justify-content: flex-end;
+            
+            // Selectors
+            
+            &:first-child {
+                justify-content: flex-start;
+            }            
+        }
+        
+        // Links
+        
+        a {
+            
+            // Style
+            
+            color: #999;
+            padding: 0 $d-pad-s;
+            text-decoration: none;
+            
+            // Box
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            // States
+            
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+    
+    // Imports
+    
+    //@import 'body';
+    //@import 'header';
+    //@import 'footer';
+    //@import 'navigation/directional';
+}

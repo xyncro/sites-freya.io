@@ -1,9 +1,3 @@
-
-# Paths
-
-layouts_dir: _templates
-includes_dir: _templates
-
 # Exclusions
 
 exclude: [

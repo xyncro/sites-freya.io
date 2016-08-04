@@ -1,4 +1,13 @@
 ---
-layout: posts
+layout: blog/base
 title: Blog
 ---
+
+<!-- Jekyll -->
+
+<section class="posts">
+  <h1>Blog</h1>
+  {% for p in site.posts %}
+  {% include blog/post-summary.html post=p %}
+  {% endfor %}  
+</section>

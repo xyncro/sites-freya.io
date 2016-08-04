@@ -10,27 +10,13 @@ freya: scss
 
 @import 'reset';
 
-// Common
+// Highlight
 
-@import 'common/body';
-@import 'common/code';
-@import 'common/header';
-@import 'common/footer';
-@import 'common/navigation/directional';
+@import 'highlight';
 
-// Blog
+// Sections
 
-@import 'blog/posts';
-@import 'blog/post';
-
-// Documentation
-
-@import 'documentation/document';
+@import 'sections/common';
+@import 'sections/home';
+@import 'blog/blog';
 @import 'documentation/documentation';
-@import 'documentation/navigation/breadcrumb';
-@import 'documentation/navigation/content';
-
-// Home
-
-@import 'home/features';
-@import 'home/splash';

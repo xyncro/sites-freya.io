@@ -1,25 +1,10 @@
-// Import
-
-@import '../dimension';
-
 // Documentation
 
 .documentation {
 
-    // Variables
+    // Imports
 
-    $d-header: $d-header-m + $d-header-y;
-    $d-bars: $d-bar-y * 2;
-    
-    // Style
-    
-    width: $d-content-x;
-    
-    // Position
-
-    margin-top: $d-header + $d-bars;
-
-    // Box
-
-    display: flex;
+    @import 'section';
+    @import 'navigation/breadcrumb';
+    @import 'navigation/content';
 }
