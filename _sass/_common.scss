@@ -1,5 +1,7 @@
-@import '../mixins';
-@import '../variables';
+@import 'mixins/flex';
+@import 'variables/colour';
+@import 'variables/dimension';
+@import 'variables/font';
 
 // Common
 
@@ -11,20 +13,62 @@ body {
     font-family: $f-family-sans;
     font-weight: $f-weight-m;
     font-size: $f-size-b;
-
+    margin: 0;
+    padding: 0;
+    
     // Links
 
     a {
         text-decoration: none;
     }
 
+    // Headings
+
+    h1, h2, h3, h4, h5 {
+        margin: 0;
+        padding: 0;
+    }
+
+    // Lists
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+    
     // Paragraphs
 
     p {
         line-height: $f-height-b;
-    } 
+        margin: 0;
+        padding: 0;
+    }
+
+    // Code
+
+    pre, code {
+        font-family: $f-family-code;
+        font-size: 13px;
+        font-weight: $f-weight-m;
+    }
+
+    code {
+        background-color: #f5f5f5;
+        color: #666;
+        padding: 3px;
+        margin: -3px 1px;
+    }
 
     // Header
+
+    header {
+        margin: 0;
+        padding: 0;
+    }
     
     > header {        
         background-color: $c-p1;
@@ -90,6 +134,11 @@ body {
 
     // Footer
 
+    footer {
+        margin: 0;
+        padding: 0;
+    }
+
     > footer {
         @include flex-column-center;
         background-color: #eee;
@@ -151,91 +200,44 @@ body {
 
     // Directional Navigation
     
-    .directional {
-        
-        // Variables
-        
-        $d-header: $d-header-m + $d-header-y;
-        $d-bar: $d-bar-y;
-        
-        // Style
-        
+    .directional {        
         background-color: #eee;
-        height: $d-bar-y;
-        width: 100%;
-        
-        // Position
-        
-        position: fixed;
-        top: $d-header + $d-bar;
-        left: 0;
-        
-        // Box
-        
         display: flex;
+        height: $d-bar-y;
         justify-content: center;
-        
-        // Containers
-        
-        ul {
-            
-            // Style
-            
-            list-style-type: none;
-            width: $d-content-x;
-            
-            // Box
-            
-            display: flex;
-            
-        }
-        
-        li {
-            
-            // Style
-            
-            width: $d-content-x / 2;
-            
-            // Box
-            
-            display: flex;
-            justify-content: flex-end;
-            
-            // Selectors
-            
-            &:first-child {
-                justify-content: flex-start;
-            }            
-        }
-        
+        left: 0;
+        position: fixed;
+        top: $d-header-m + $d-header-y + $d-bar-y;
+        width: 100%;
+
         // Links
         
         a {
-            
-            // Style
-            
+            @include flex-row-center;
             color: #999;
-            padding: 0 $d-pad-s;
-            text-decoration: none;
-            
-            // Box
-            
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            // States
+            padding: 0 $d-pad-m;
             
             &:hover {
                 background-color: #ddd;
             }
         }
+        
+        // Lists
+        
+        ul {
+            display: flex;
+            list-style-type: none;
+            width: $d-content-x;
+        }
+        
+        li {
+            display: flex;
+            justify-content: flex-end;
+            width: $d-content-x / 2;
+                        
+            &:first-child {
+                justify-content: flex-start;
+            }            
+        }
     }
-    
-    // Imports
-    
-    //@import 'body';
-    //@import 'header';
-    //@import 'footer';
-    //@import 'navigation/directional';
 }

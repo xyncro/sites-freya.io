@@ -6,17 +6,13 @@ freya: scss
 
 @import 'https://fonts.googleapis.com/css?family=Inconsolata|Roboto:100,300,400|Roboto+Mono:300,400';
 
-// Reset
+// Content
 
-@import 'reset';
-
-// Highlight
-
-@import 'highlight';
-
-// Sections
-
-@import 'sections/common';
-@import 'sections/home';
+@import 'common';
+@import 'home';
 @import 'blog/blog';
-@import 'documentation/documentation';
+//@import 'documentation/documentation';
+
+// Syntax
+
+@import 'syntax';

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog/post
 title:  "More Posts Welcoming People to Jekyll!"
 date:   2016-08-03 23:23:28 +0100
 ---

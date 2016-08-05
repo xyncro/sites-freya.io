@@ -1,6 +1,6 @@
 // Import
 
-@import '../../dimension';
+@import '../../variables/dimension';
 
 // Views
 
@@ -51,7 +51,7 @@
         // Style
         
         color: #666;
-        padding: 0 $d-pad-s;
+        padding: 0 $d-pad-m;
         text-decoration: none;
         
         // Box

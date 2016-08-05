@@ -1,9 +1,9 @@
 // Import
 
-@import '../colour';
-@import '../common/code';
-@import '../common/links';
-@import '../dimension';
+@import '../variables/colour';
+//@import '../common/code';
+//@import '../common/links';
+@import '../variables/dimension';
 
 // Posts
 
@@ -11,8 +11,8 @@
 
     // Includes
 
-    @include code();
-    @include links();
+    //@include code();
+    //@include links();
 
     // Imports
 

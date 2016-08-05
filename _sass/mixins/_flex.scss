@@ -1,16 +1,3 @@
-@import 'variables';
-
-// Container
-
-@mixin container-underlined {
-    border-bottom: 1px solid #ccc;
-    padding: $d-pad-l $d-pad-m;
-    
-    &:last-child {
-        border-bottom: 0px solid #ccc;
-    }
-}
-
 // Flex
 
 @mixin flex-center($direction) {
