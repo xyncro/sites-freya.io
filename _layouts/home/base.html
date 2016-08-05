@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Freya</title>
+    <title>{% if page.title %}{{ page.title | escape }} &mdash; {% endif %}Freya</title>
     {% include common/links.html %}
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

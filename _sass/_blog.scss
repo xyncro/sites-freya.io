@@ -1,0 +1,134 @@
+@import 'mixins/links';
+@import 'variables/colour';
+@import 'variables/dimension';
+@import 'variables/font';
+
+// Blog
+
+.blog {
+
+    // Posts
+    
+    .posts {
+        margin-top: $d-header-m + $d-header-y + $d-bar-y;
+        width: $d-content-x;
+        
+        // Headings
+        
+        > h1 {
+            color: $c-p2;
+            font-size: 30px;
+            font-weight: $f-weight-m;
+            padding: $d-pad-l $d-pad-m $d-pad-m $d-pad-m;
+        }
+
+        // Summary
+
+        .summary {
+            
+            margin-bottom: $d-pad-l;            
+            display: flex;
+            flex-wrap: wrap;
+
+            // Header
+            
+            header {
+                @include links-light;
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 0 $d-pad-m;
+                width: 300px;
+
+                h1 {
+                    color: $c-p2;
+                    font-size: 24px;
+                    font-weight: $f-weight-m;
+                    margin-bottom: $d-pad-m;
+                }
+
+                dl, dt, dd {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                dl {
+                    display: flex;
+                    flex-wrap: wrap;
+                    line-height: $f-height-b;
+
+                    dt {
+                        color: #999;
+                        width: 80px;
+                    }
+                    
+                    dd {
+                        width: 220px;
+                    }
+                }
+            }
+
+            // Footer
+            
+            footer {
+                @include links-body;
+                margin-left: 340px;
+                padding: 0 $d-pad-m;
+                width: 580px;
+            }
+
+            // Content
+            
+            section {
+                @include links-body;
+                padding: 0 $d-pad-m;
+                width: 580px;
+                
+                p {
+                    margin-bottom: $d-pad-m;
+                }
+            }   
+        }   
+    }
+
+    // Views Navigation
+
+    .views {
+        background-color: #ddd;
+        display: flex;
+        height: $d-bar-y;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: $d-header-m + $d-header-y;
+        width: 100%;
+        
+        // Lists
+        
+        ul {
+            display: flex;
+            width: $d-content-x;
+            
+            li {
+                display: flex;            
+            }
+        }
+        
+        // Links
+        
+        a {
+            align-items: center;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            padding: 0 $d-pad-m;
+            text-decoration: none;
+            
+            &:hover {
+                background-color: #ccc;
+                color: #666;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import '../variables/font';
+
+// Links
+
+@mixin links-body {
+    a {
+        border-bottom: 1px solid #ccc;
+        color: #333;
+        font-weight: $f-weight-h;
+        padding: 2px 0;
+        margin: -2px 0;
+        
+        &:hover {
+            border-bottom: 1px solid #666;
+        }
+    }
+}
+
+@mixin links-light {
+    a {
+        border-bottom: 1px solid #ccc;
+        color: #999;
+        padding: 2px 0;
+        margin: -2px 0;
+
+        &:hover {
+            border-bottom: 1px solid #666;
+            color: #333;
+        }
+    }
+}
