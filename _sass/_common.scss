@@ -6,7 +6,6 @@
 // Common
 
 body {
-
     @include flex-column-center;
     background-color: $c-bg;
     color: #333;
@@ -31,12 +30,12 @@ body {
 
     // Lists
 
-    ul, li {
+    ul, li, dl, dt, dd {
         margin: 0;
         padding: 0;
     }
 
-    ul {
+    ul, dl {
         list-style-type: none;
     }
     

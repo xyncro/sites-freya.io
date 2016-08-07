@@ -7,28 +7,55 @@
 
 .blog {
 
+    // Content
+
+    @mixin content-after($content) {
+        &:after {
+            content: $content;
+        }
+    }
+    
+    // Containers
+
+    @mixin container {
+        padding: 0 $d-pad-m;
+        width: $d-content-x - (2 * $d-pad-m);
+    }
+    
     // Posts
     
     .posts {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         margin-top: $d-header-m + $d-header-y + $d-bar-y;
-        width: $d-content-x;
-        
+        width: 100%;
+
         // Headings
-        
-        > h1 {
+
+        h1 {
             color: $c-p2;
-            font-size: 30px;
             font-weight: $f-weight-m;
-            padding: $d-pad-l $d-pad-m $d-pad-m $d-pad-m;
         }
+        
+        // Header
+
+        > header {
+            @include container;
+            margin: $d-pad-l 0;
+            
+            h1 {
+                font-size: 30px;
+            }
+        }        
 
         // Summary
 
         .summary {
-            
-            margin-bottom: $d-pad-l;            
+            @include container;
             display: flex;
             flex-wrap: wrap;
+            margin-bottom: $d-pad-l;
 
             // Header
             
@@ -37,20 +64,11 @@
                 align-items: flex-start;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
-                padding: 0 $d-pad-m;
-                width: 300px;
+                width: 380px;
 
                 h1 {
-                    color: $c-p2;
                     font-size: 24px;
-                    font-weight: $f-weight-m;
                     margin-bottom: $d-pad-m;
-                }
-
-                dl, dt, dd {
-                    margin: 0;
-                    padding: 0;
                 }
 
                 dl {
@@ -59,22 +77,25 @@
                     line-height: $f-height-b;
 
                     dt {
-                        color: #999;
+                        color: #ccc;
                         width: 80px;
                     }
                     
                     dd {
-                        width: 220px;
+                        color: #999;
+                        width: 300px;
 
-                        a {
-                            &:after {
-                                content: ',';
+                        ul {
+                            display: flex;
+                            
+                            li {
+                                @include content-after("/");
+                                color: #ccc;
+                                margin-right: 4px;
                             }
-                        }
-
-                        a:last-child {
-                            &:after {
-                                content: none;
+                            
+                            li:last-child {
+                                @include content-after(none);
                             }
                         }
                     }
@@ -84,18 +105,16 @@
             // Footer
             
             footer {
-                @include links-body;
-                margin-left: 340px;
-                padding: 0 $d-pad-m;
-                width: 580px;
+                @include links-normal;
+                margin-left: 380px;
+                width: 540px;
             }
 
             // Content
             
             section {
-                @include links-body;
-                padding: 0 $d-pad-m;
-                width: 580px;
+                @include links-normal;
+                width: 540px;
                 
                 p {
                     margin-bottom: $d-pad-m;

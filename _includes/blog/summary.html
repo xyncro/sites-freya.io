@@ -8,9 +8,13 @@
       <dd>{{ include.post.date | date: "%Y.%m.%d" }}</dd>
       <dt>Tags</dt>
       <dd>
-        {% for tag in include.post.tags %}
-        <a href="#">{{ tag }}</a>
-        {% endfor %}
+        <ul>
+          {% for tag in include.post.tags %}
+          <li>
+            <a href="#">{{ tag }}</a>
+          </li>
+          {% endfor %}
+        </ul>
       </dd>
     </dl>
   </header>
