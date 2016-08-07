@@ -65,6 +65,18 @@
                     
                     dd {
                         width: 220px;
+
+                        a {
+                            &:after {
+                                content: ',';
+                            }
+                        }
+
+                        a:last-child {
+                            &:after {
+                                content: none;
+                            }
+                        }
                     }
                 }
             }
