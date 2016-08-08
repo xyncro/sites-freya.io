@@ -21,25 +21,89 @@
         padding: 0 $d-pad-m;
         width: $d-content-x - (2 * $d-pad-m);
     }
-    
-    // Posts
-    
-    .posts {
+
+    // Headings
+
+    h1 {
+        color: $c-p2;
+        font-weight: $f-weight-m;
+    }
+
+    // Common
+
+    .posts, .post {
         align-items: center;
         display: flex;
+        flex: 1;
         flex-direction: column;
-        margin-top: $d-header-m + $d-header-y + $d-bar-y;
         width: 100%;
+    }
 
-        // Headings
+    .summary, .full {
+        @include container;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: $d-pad-l;
 
-        h1 {
-            color: $c-p2;
-            font-weight: $f-weight-m;
-        }
-        
         // Header
+            
+        header {
+            @include links-light;
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            width: 380px;
 
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+                line-height: $f-height-b;
+                
+                dt {
+                    color: #ccc;
+                    width: 80px;
+                }
+                
+                dd {
+                    color: #999;
+                    width: 300px;
+                    
+                    ul {
+                        display: flex;
+                        
+                        li {
+                            @include content-after("/");
+                            color: #ccc;
+                            margin-right: 4px;
+                        }
+                        
+                        li:last-child {
+                            @include content-after(none);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Content
+            
+        section {
+            @include links-normal;
+            width: 540px;
+            
+            p {
+                margin-bottom: $d-pad-m;
+            }
+        }
+    }
+
+    // Posts
+    
+    .posts {        
+        margin-top: $d-header-m + $d-header-y + $d-bar-y;
+
+        // Header
+        
         > header {
             @include container;
             margin: $d-pad-l 0;
@@ -47,61 +111,21 @@
             h1 {
                 font-size: 30px;
             }
-        }        
+        }
 
         // Summary
 
         .summary {
-            @include container;
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: $d-pad-l;
-
+            
             // Header
             
             header {
-                @include links-light;
-                align-items: flex-start;
-                display: flex;
-                flex-direction: column;
-                width: 380px;
-
                 h1 {
                     font-size: 24px;
                     margin-bottom: $d-pad-m;
                 }
-
-                dl {
-                    display: flex;
-                    flex-wrap: wrap;
-                    line-height: $f-height-b;
-
-                    dt {
-                        color: #ccc;
-                        width: 80px;
-                    }
-                    
-                    dd {
-                        color: #999;
-                        width: 300px;
-
-                        ul {
-                            display: flex;
-                            
-                            li {
-                                @include content-after("/");
-                                color: #ccc;
-                                margin-right: 4px;
-                            }
-                            
-                            li:last-child {
-                                @include content-after(none);
-                            }
-                        }
-                    }
-                }
             }
-
+            
             // Footer
             
             footer {
@@ -109,20 +133,35 @@
                 margin-left: 380px;
                 width: 540px;
             }
-
-            // Content
-            
-            section {
-                @include links-normal;
-                width: 540px;
-                
-                p {
-                    margin-bottom: $d-pad-m;
-                }
-            }   
         }   
     }
 
+    // Post
+
+    .post {
+        margin-top: $d-header-m + $d-header-y + (2 * $d-bar-y) + $d-pad-l;
+
+        // Full
+
+        .full {
+
+            // Header
+            
+            header {
+                h1 {
+                    font-size: 30px;
+                    margin-bottom: $d-pad-m;
+                }
+            }
+
+            // Content
+
+            section {
+                margin-top: 5px;
+            }
+        }
+    }
+    
     // Views Navigation
 
     .views {

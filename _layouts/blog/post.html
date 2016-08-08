@@ -7,8 +7,17 @@ layout: blog/base
 <!-- Jekyll -->
 
 {% include common/navigation/directional.html %}
+<section class="post">
+  {% include blog/full.html post=page %}
+</section>
 
-<section class="blog post">
+
+
+
+
+
+
+<!--<section class="blog post">
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
@@ -18,4 +27,4 @@ layout: blog/base
       {{ content }}
     </div>
   </article>
-</section>
+</section>-->

@@ -30,6 +30,7 @@ exclude: [
 
 urls:
   freya:
+    core: https://freya.io
     docs: http://localhost:8000
     # docs: https://docs.freya.io
     git: https://github.com/xyncro/freya
