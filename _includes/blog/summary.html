@@ -1,29 +1,13 @@
 <!-- Jekyll -->
 
-<article class="summary">
-  <header>
-    <h1>{{ include.post.title }}</h1>
-    <dl>
-      <dt>Date</dt>
-      <dd>{{ include.post.date | date: "%Y.%m.%d" }}</dd>
-      <dt>Tags</dt>
-      <dd>
-        <ul>
-          {% for tag in include.post.tags %}
-          <li>
-            <a href="#">{{ tag }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </dd>
-    </dl>
-  </header>
-  <section>
+<article class="summary" itemscope itemtype="http://schema.org/BlogPosting">
+  {% include blog/header.html post=include.post %}
+  <section itemprop="articleBody">
     {{ include.post.excerpt }}
   </section>
   <footer>
     <p>
-      <a href="{{ include.post.url }}">Read Full Post...</a>
+      <a href="{{ site.urls.freya.core }}{{ include.post.url }}" itemprop="url">Read Full Post...</a>
     </p>
   </footer>
 </article>
