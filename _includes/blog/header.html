@@ -14,19 +14,25 @@
       <ul>
         {% for tag in include.post.tags %}
         <li>
-          <a href="#" itemprop="articleSection">{{ tag }}</a>
+          <a href="{{ site.urls.freya.core }}/blog/tagged.html#{{ tag }}" itemprop="articleSection">
+            {{ tag }}
+          </a>
         </li>
         {% endfor %}
       </ul>
     </dd>
     <dt>URL</dt>
     <dd>
-      <a href="{{ site.urls.freya.core }}{{ include.post.url }}" itemprop="url">permalink</a>
+      <a href="{{ site.urls.freya.core }}{{ include.post.url }}" itemprop="url">
+        permalink
+      </a>
     </dd>
     {% if include.post.author %}
     <dt>Author</dt>
     <dd itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <span itemprop="name">{{ include.post.author }}</span>
+      <span itemprop="name">
+        {{ include.post.author }}
+      </span>
     </dd>
     {% endif %}
   </dl>

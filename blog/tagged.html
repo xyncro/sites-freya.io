@@ -1,0 +1,46 @@
+---
+
+layout: blog/base
+
+---
+
+<!-- Jekyll -->
+
+<section class="tags">
+  <header>
+    <h1>Tagged<h1>
+  </header>
+  {% assign tags = site.tags | sort %}
+  {% for tag in tags %}
+  <section class="tag" id="{{ tag[0] }}">
+    <header>
+      <a name="{{ tag[0] }}">
+        <h1>{{ tag[0] }}</h1>
+      </a>
+    </header>
+    <nav>
+      <ul>
+        {% assign posts = tag[1] | sort "date" | reverse %}
+        {% for post in posts %}
+        <li itemscope itemtype="http://schema.org/BlogPosting">
+          <dl>
+            <dt>Date</dt>
+            <dd>
+              <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ post.date | date: "%Y.%m.%d" }}
+              </time>
+            </dd>
+            <dt>Title</dt>
+            <dd itemprop="name headline">
+              <a href="{{ site.urls.freya.core }}{{ post.url }}" itemprop="url">
+                {{ post.title }}
+              </a>
+            </dd>
+          </dl>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </section>
+  {% endfor %}
+</section>

@@ -1,0 +1,48 @@
+---
+
+layout: blog/base
+
+---
+
+<!-- Jekyll -->
+
+<section class="dates">
+  <header>
+    <h1>Dated<h1>
+  </header>
+  {% for post in site.posts %}
+  {% assign currentdate = post.date | date: "%Y.%m" %}
+  {% if currentdate != date %}
+  {% unless forloop.first %}
+    </ul>
+  </section>
+  {% endunless %}
+  <section class="date">
+    <header>
+      <h1>{{ currentdate }}</h1>
+    </header>
+    <ul>
+    {% assign date = currentdate %}
+    {% endif %}
+      <li itemscope itemtype="http://schema.org/BlogPosting">
+        <dl>
+          <dt>Date</dt>
+          <dd>
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+              {{ post.date | date: "%Y.%m.%d" }}
+            </time>
+          </dd>
+          <dt>Title</dt>
+          <dd itemprop="name headline">
+            <a href="{{ site.urls.freya.core }}{{ post.url }}" itemprop="url">
+              {{ post.title }}
+            </a>
+          </dd>
+        </dl>
+      </li>
+    {% if forloop.last %}
+    </ul>
+  </section>  
+  {% endif %}
+  {% endfor %}
+</section>

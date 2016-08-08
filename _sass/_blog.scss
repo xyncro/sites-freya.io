@@ -31,7 +31,7 @@
 
     // Common
 
-    .posts, .post {
+    .tags, .dates, .posts, .post {
         align-items: center;
         display: flex;
         flex: 1;
@@ -105,9 +105,7 @@
         }
     }
 
-    // Posts
-    
-    .posts {        
+    .posts, .dates, .tags {
         margin-top: $d-header-m + $d-header-y + $d-bar-y;
 
         // Header
@@ -120,7 +118,48 @@
                 font-size: 30px;
             }
         }
+    }
 
+    .dates, .tags {
+        .date, .tag {
+            //background-color: #ccc;
+            @include container;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: $d-pad-l;
+
+            header {
+                width: 380px;
+
+                h1 {
+                    font-size: 24px;
+                }
+            }
+
+            dl {
+                @include links-normal;
+                display: flex;
+                line-height: $f-height-b;
+                margin-top: 5px;
+
+                dt {
+                    display: none;
+                }
+            }
+
+            time {
+                //background-color: #f00;
+                color: #ccc;
+                display: block;
+                width: 140px;
+            }
+        }
+    }
+
+    // Posts
+    
+    .posts {        
+        
         // Summary
 
         .summary {
