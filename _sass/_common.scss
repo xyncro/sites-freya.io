@@ -11,7 +11,7 @@ body {
     color: #333;
     font-family: $f-family-sans;
     font-weight: $f-weight-m;
-    font-size: $f-size-b;
+    font-size: $f-size-m;
     margin: 0;
     padding: 0;
 
@@ -44,7 +44,7 @@ body {
     // Paragraphs
 
     p {
-        line-height: $f-height-b;
+        line-height: $f-height-m;
         margin: 0;
         padding: 0;
     }
@@ -53,7 +53,7 @@ body {
 
     pre, code {
         font-family: $f-family-code;
-        font-size: 13px;
+        font-size: $f-size-s;
         font-weight: $f-weight-m;
     }
 
@@ -75,7 +75,6 @@ body {
         background-color: $c-p1;
         border-top: $d-pad-s solid darken($c-p1, 5%);
         display: flex;
-        flex: 1;
         height: $d-header-y;
         justify-content: center;
         left: 0;
@@ -93,7 +92,7 @@ body {
         // Headings
         
         h1 {
-            font-size: $f-size-b;
+            font-size: $f-size-m;
             font-weight: $f-weight-h;
             width: 160px;
         }
@@ -144,7 +143,7 @@ body {
     > footer {
         @include flex-column-center;
         background-color: #eee;
-        line-height: $f-height-b;
+        line-height: $f-height-m;
         width: 100%;
     
         // Nav

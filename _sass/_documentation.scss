@@ -1,0 +1,301 @@
+@import 'mixins/links';
+@import 'variables/colour';
+@import 'variables/dimension';
+@import 'variables/font';
+
+// Documentation
+
+.documentation {
+
+    // Section
+
+    > section {
+        display: flex;
+        margin-top: $d-header-m + $d-header-y + (2 * $d-bar-y);
+        width: $d-content-x;
+
+        // Article
+
+        > article {
+            @include links-normal;
+            //line-height: $f-height-m;
+            margin-left: $d-pad-m;
+            padding: 40px $d-pad-m; //$d-pad-l $d-pad-m;
+            width: $d-content-x - 300px - (2 * $d-pad-m) - $d-pad-m;
+            
+            // Headings
+            
+            h1, h2, h3, h4 {
+                color: #666;
+                font-size: $f-size-m;
+                font-weight: $f-weight-m;
+                margin: 0 0 $d-pad-l 0;
+            }
+            
+            h1 {
+                font-size: $f-size-xl;
+            }
+            
+            h2 {
+                font-size: $f-size-l;
+            }
+            
+            h3 {
+                font-size: $f-size-m;
+            }
+            
+            // Emphasis
+            
+            strong {
+                font-weight: $f-weight-h;
+            }
+            
+            // Paragraphs
+            
+            p {
+                line-height: $f-height-m;
+                margin: 0 0 $d-pad-m 0;
+            }
+            
+            // Links
+            
+            a {
+                // Markers
+                
+                &.headerlink {
+                    border-bottom: 1px solid #ddd;
+                    color: #ddd;
+                    font-size: $f-size-m;
+                    margin: 0 $d-pad-s;
+                    
+                    &:hover {
+                        border-bottom: 1px solid #666;
+                        color: #999;
+                    }
+                }
+                
+                em {
+                    font-style: normal;
+                }
+            }
+            
+            // Lists
+            
+            li {
+                line-height: $f-height-m;
+                margin-bottom: $d-pad-m;
+            }
+            
+            // Sections
+            
+            .section {
+                margin: $d-pad-l 0;
+                
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            
+            // Admonitions
+            
+            .admonition {
+                margin: 0 (-1 * $d-pad-m) $d-pad-m (-1 * $d-pad-m);
+                
+                // Containers
+
+                @mixin admonition($bg) {
+                    background-color: $bg;
+                    padding: $d-pad-s $d-pad-m;
+                    margin: 0;
+                }
+                
+                .admonition-title {                    
+                    @include admonition(#ddd);
+                    font-weight: $f-weight-h;
+                }
+                
+                .last {                    
+                    @include admonition(#eee);
+                    padding: $d-pad-m;
+                }
+                
+                // Types
+
+                @mixin type($color) {
+                    border-top: 2px solid $color;
+                }
+                
+                &.attention {
+                    @include type(#f00);
+                }
+                
+                &.hint {
+                    @include type(#13d423);
+                }
+                
+                &.important {
+                    @include type(#f00);
+                }
+                
+                &.note {
+                    @include type(#1383d4);
+                }
+            }
+            
+            // Trees
+            
+            .toctree-wrapper ul {
+                margin-bottom: $d-pad-m;
+            }
+            
+            .toctree-wrapper li {
+                margin: $d-pad-s 0;
+            }
+            
+            // Highlight
+            
+            .highlight {
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                padding: $d-pad-m;
+                margin: 0 (-1 * $d-pad-m) $d-pad-m (-1 * $d-pad-m);
+            }
+        }   
+    }
+
+    // Breadcrumb
+
+    .breadcrumb {
+        background-color: #ddd;
+        display: flex;
+        height: $d-bar-y;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: $d-header-m + $d-header-y;
+        width: 100%;
+
+        // Containers
+
+        ul, li {
+            display: flex;
+        }
+        
+        ul {
+            width: $d-content-x;
+        }
+        
+        // Links
+        
+        a {
+            align-items: center;
+            color: #666;
+            display: flex;
+            justify-content: center;
+            padding: 0 $d-pad-m;
+            text-decoration: none;
+            
+            &:hover {
+                background-color: #ccc;
+                color: #666;
+            }
+        }
+    }
+
+    // Content
+    
+    .content {
+        padding: $d-pad-l 0;
+        line-height: $f-height-m;
+        width: 300px;
+        
+        // Containers
+        
+        li {
+            margin-left: $d-pad-m;            
+        }
+        
+        p {
+            border-bottom: 1px solid #ccc;
+            color: #666;
+            font-weight: $f-weight-h;
+            padding: 0 0 $d-pad-s 0;
+            margin: $d-pad-m $d-pad-m $d-pad-s $d-pad-m;
+        }
+        
+        // Links
+        
+        a {
+            color: #999;
+            font-weight: $f-weight-m;
+            text-decoration: none;
+            
+            &.current {
+                color: #333;
+                font-weight: $f-weight-h;
+                
+                &:hover {
+                    color: #000;
+                }
+            }
+            
+            &:hover {
+                color: #333;
+            }
+        }
+        
+        .current a {
+            color: #666;
+            
+            &:hover {
+                color: #000;
+            }
+        }
+        
+        .current > a {
+            font-weight: $f-weight-h;
+        }
+        
+        // Search
+        
+        .search {
+            margin: 20px;
+            
+            // Fields
+            
+            input[type=text] {
+                
+                // Style
+                
+                background-color: #eee;
+                border-width: 0;
+                color: #333;
+                font-size: $f-size-m;
+                font-weight: $f-weight-m;
+                margin: 0;
+                padding: $d-pad-s;
+                width: 200px;
+                
+                &:focus {
+                    background-color: #fff;
+                }
+            }
+
+            @mixin placeholder() {
+                color: #ccc;
+            }
+            
+            input:-ms-input-placeholder {
+                @include placeholder();
+            }
+            
+            input::-webkit-input-placeholder {
+                @include placeholder();
+            }
+            
+            input:-moz-placeholder {
+                @include placeholder();
+            }
+        }
+    }
+}

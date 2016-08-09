@@ -40,7 +40,7 @@
         
         h2 {
             @include glow(5px);            
-            font-size: $f-size-s1;
+            font-size: $f-size-l;
             font-weight: $f-weight-l;
             line-height: $d-pad-l;
             text-align: center;
@@ -67,7 +67,7 @@
         // Paragraphs
 
         p {
-            line-height: $f-height-b;
+            line-height: $f-height-m;
         }
 
         // Feature
@@ -78,7 +78,7 @@
             
             h1 {
                 color: $c-p2;
-                font-size: 30px;
+                font-size: $f-size-xl;
                 font-weight: $f-weight-m;
                 margin-bottom: $d-pad-m;                
             }

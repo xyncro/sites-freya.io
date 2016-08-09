@@ -6,10 +6,10 @@
   </h1>
   <nav>
     <ul>
-      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/topics/getting-started.html"{% if pagename == 'topics/getting-started' %} class="current"{% endif %}>Getting Started</a></li>
-      <li><a href="{{ theme_urls_freya_core }}/blog"{% if page %}{% if page.title == 'Blog' or page.id %} class="current"{% endif %}{% endif %}>Blog</a></li>
-      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/"{% if theme_urls_freya_core and pagename != 'topics/getting-started' and pagename != 'meta/community' %} class="current"{% endif %}>Documentation</a></li>
-      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/en/latest/meta/community.html"{% if pagename == 'meta/community' %} class="current"{% endif %}">Community</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/topics/getting-started.html"{% if pagename == 'topics/getting-started' %} class="current"{% endif %}>Getting Started</a></li>
+      <li><a href="{{ theme_urls_freya_core }}/blog"{% if page %}{% if page.layout == 'blog/base' or page.id %} class="current"{% endif %}{% endif %}>Blog</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/"{% if theme_urls_freya_core and pagename != 'topics/getting-started' and pagename != 'meta/community' %} class="current"{% endif %}>Documentation</a></li>
+      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/meta/community.html"{% if pagename == 'meta/community' %} class="current"{% endif %}>Community</a></li>
       <li><a href="{% if site %}{{ site.urls.freya.git }}{% endif %}{{ theme_urls_freya_git }}">Code</a></li>
     </ul>
   </nav>

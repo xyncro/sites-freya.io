@@ -14,6 +14,8 @@ exclude: [
 
   # Sphinx
 
+  _build,
+
   conf.py,
   Makefile,
 
@@ -33,7 +35,7 @@ urls:
     core: http://localhost:4000
     # core: https://freya.io
     docs: http://localhost:8000
-    # docs: https://docs.freya.io
+    # docs: https://docs.freya.io/en/latest
     git: https://github.com/xyncro/freya
     twitter: https://twitter.com/freyafs
 

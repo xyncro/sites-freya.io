@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <title>{{ title | striptags | e }} &mdash; Documentation &mdash; Freya</title>
-    {% include "common/links.html" %}
+    {% include "../_includes/common/links.html" %}
   </head>
   <body class="documentation">
-    {% include "common/header.html" %}
-    {% include "documentation/navigation/breadcrumb.html" %}
-    {% include "common/navigation/directional.html" %}
+    {% include "../_includes/common/header.html" %}
+    {% include "../_includes/documentation/breadcrumb.html" %}
+    {% include "../_includes/common/directional.html" %}
     <section>
-      {% include "documentation/navigation/content.html" %}
+      {% include "../_includes/documentation/content.html" %}
       <article>
         {% block body %}{% endblock %}
       </article>
     </section>
-    {% include "common/footer.html" %}
+    {% include "../_includes/common/footer.html" %}
     {# include "includes/meta/version.html" #}
     {# include "includes/meta/edit.html" #}
     {# include "includes/search/search.html" #}
