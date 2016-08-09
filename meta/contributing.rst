@@ -10,7 +10,7 @@ Contributions to Freya in any form are very welcome. Whether you just want to co
 Documentation
 -------------
 
-If you'd like to contribute to the documentation, the quickest way is to use the "Edit on GitHub" link at the top of any page -- that'll allow you to edit any content and send a pull request easily.
+If you'd like to contribute to the documentation, the quickest way is to use the "Edit Page" link at the bottom of any page -- that'll allow you to edit any content and send a pull request easily via GitHub.
 
 Although it's very likely that your help will be accepted without any issue, if you're planning on making major changes to the structure or content of Freya documentation it's probably worth discussing it first. Please get in :doc:`/meta/contact` and talk before expending major effort!
 

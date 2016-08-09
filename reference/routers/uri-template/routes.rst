@@ -1,7 +1,7 @@
 Routes
 ======
 
-The URI Template router is based on mapping requests to ``Pipeline`` functions -- see :doc:`/reference/libraries/core/pipelines` if you're not familiar with the Freya pipeline concept. It maps the request by matching the method and the path and query against a URI Template.
+The URI Template router is based on mapping requests to ``Pipeline`` functions -- see :doc:`/reference/core/pipelines` if you're not familiar with the Freya pipeline concept. It maps the request by matching the method and the path and query against a URI Template.
 
 Syntax
 ------
@@ -13,7 +13,7 @@ Definitions
 
 Routes are defined by specifying a requirement for the HTTP method (or verb), a requirement for the path, and the ``Pipeline`` function to call if the route is matched. Route matching effectively happens in definition order precedence, although the router internally converts the route definitions to an optimised trie for performance reasons.
 
-Strongly typed values are used for the requirements, using types taken from the :doc:`/reference/libraries/types/index` libraries, in this case **Freya.Types.Http** and **Freya.Types.Uri.Template**, as well as types from **Freya.Routers.Uri.Template**. Here's an annotated example of setting up a router, including opening appropriate modules/namespace:
+Strongly typed values are used for the requirements, using types taken from the :doc:`/reference/types/index` libraries, in this case **Freya.Types.Http** and **Freya.Types.Uri.Template**, as well as types from **Freya.Routers.Uri.Template**. Here's an annotated example of setting up a router, including opening appropriate modules/namespace:
 
 .. code-block:: fsharp
 

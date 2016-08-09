@@ -9,7 +9,7 @@ The URI Template type library, combined with the **Freya.Routers.Uri.Template** 
 
 .. important::
 
-   The specification of URI Templates is aimed at parts of URIs outside of the path (specific formulations for query strings, fragments, etc.) This means that Freya expects to match a full path and query string. You can make sure this works when you may have a query string by defining a catch-all query string on the end of your route URI Templates.
+   The specification of URI Templates is aimed at parts of URIs outside of the path (specific formulations for query strings, fragments, etc.) This means that Freya expects to match a full path and query string. You can make sure this works when you may have a query string by defining a catch-all query string on the end of your route URI Templates like so: ``{?q*}``.
 
 Lists
 -----
@@ -22,7 +22,7 @@ Matching simple lists of values in URIs can be useful. Using simple URI Template
    // separated by commas
 
    let listTemplate =
-       UriTemplate.Parse "/{values*}"
+       UriTemplate.parse "/{values*}"
 
    // /one,two,three ->
    Freya.Optic.get (Route.list_ "values")
@@ -39,7 +39,7 @@ Matching key/value pairs can also be a useful technique:
    // pairs (x=y) separated by commas
 
    let listTemplate =
-       UriTemplate.Parse "/{pairs*}"
+       UriTemplate.parse "/{pairs*}"
 
    // /one=a,two=b,three=c ->
    Freya.Optic.get (Route.keys_ "pairs")
@@ -56,14 +56,14 @@ It is often useful to want to match a whole path, regardless of what it might be
    // match paths separated by "/" characters
                 
    let pathTemplate =
-       UriTemplate.Parse "{/segments*}"
+       UriTemplate.parse "{/segments*}"
 
    // /one/two/three ->
    Freya.Optic.get (Route.list_ "segments")
    // -> Some [ "one"; "two"; "three" ]
        
    let prefixedPathTemplate =
-       UriTemplate.Parse "/one{/segments*}"
+       UriTemplate.parse "/one{/segments*}"
 
    // /one/two/three ->
    Freya.Optic.get (Route.list_ "segments")

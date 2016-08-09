@@ -1,7 +1,7 @@
 Values
 ======
 
-As seen in :doc:`/reference/libraries/routers/uri-template/routes`, it's quite simple to map routes (the combination of method and path specification) to ``Pipeline`` functions. Once a route is matched however, you will likely need the handler to have access to the data that was matched as part of the URI Template.
+As seen in :doc:`/reference/routers/uri-template/routes`, it's quite simple to map routes (the combination of method and path specification) to ``Pipeline`` functions. Once a route is matched however, you will likely need the handler to have access to the data that was matched as part of the URI Template.
 
 Here is one of the URI Templates from the previous section:
 

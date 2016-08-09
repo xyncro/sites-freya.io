@@ -7,4 +7,4 @@ Freya is an intentionally standards based stack, whether that is broad public st
    :glob:
    :maxdepth: 1
 
-   standards/*
+   *

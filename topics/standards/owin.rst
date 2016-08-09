@@ -23,12 +23,12 @@ The obvious question now is "Where's the request and response data?" Well, it's 
 
 As an example, the key **owin.RequestPath** in the *Environment* will get (or set, as it's just a dumb dictionary) the path of the request. The key **owin.ResponseBody** is the stream used to write the response body, and so on.
 
-As you'll note -- if you've got an F# hat on (our merchandise store is coming, we assure you) -- this is all based on mutation of the *Environment*. That's not a lovely thing to see in F#, and Freya does quite a lot of work to tidy this up (or at least hide it where you can pretend it doesn't happen). You can see more about how it does so in the Core Reference section -- see :doc:`/reference/libraries/core/index`.
+As you'll note -- if you've got an F# hat on (our merchandise store is coming, we assure you) -- this is all based on mutation of the *Environment*. That's not a lovely thing to see in F#, and Freya does quite a lot of work to tidy this up (or at least hide it where you can pretend it doesn't happen). You can see more about how it does so in the Core Reference section -- see :doc:`/reference/core/index`.
 
 Servers
 -------
 
 As you can see from the simplicity of the interface (known as the *AppFunc* or *OwinAppFunc*), there's not much that a library needs to be able to do to work with a compatible OWIN server. Different OWIN servers, however, have different ways of asking for that *AppFunc*, so you may need to peruse the documentation for your specific server.
 
-In the examples and tutorials we'll see later, we'll often use the `Katana <https://katanaproject.codeplex.com/>`_ server, and we'll show how simple it is to host Freya using that. If you're using something else, it may be documented -- see :doc:`/reference/integration/servers`. If not, feel free to either ask for guidance or even submit documentation -- see :doc:`/meta/contributing`!
+In the examples and tutorials we'll see later, we'll often use the `Katana <https://katanaproject.codeplex.com/>`_ server, and we'll show how simple it is to host Freya using that. If you're using something else, it may be documented -- see :doc:`/recipes/integration/servers`. If not, feel free to either ask for guidance or even submit documentation -- see :doc:`/meta/contributing`!
 

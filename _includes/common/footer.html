@@ -3,18 +3,18 @@
 <footer>
   <nav>
     <ul>
-      <li><a href="{{ theme_urls_freya_core }}/">Freya</a></li>
+      <li><a href="{{ theme_core_url }}/">Freya</a></li>
     </ul>
     <ul>
-      <li><a href="{% if site %}{{ site.urls.freya.git }}{% endif %}{{ theme_urls_freya_git }}">GitHub</a></li>
-      <li><a href="{% if site %}{{ site.urls.freya.twitter }}{% endif %}{{ theme_urls_freya_twitter }}">Twitter</a></li>
+      <li><a href="{% if site %}{{ site.core.git }}{% endif %}{{ theme_core_git }}">GitHub</a></li>
+      <li><a href="{% if site %}{{ site.core.twitter }}{% endif %}{{ theme_core_twitter }}">Twitter</a></li>
       <li><a href="https://gitter.im/xyncro/freya">Gitter</a></li>
     </ul>
     <ul>
-      <li><a href="{{ theme_urls_freya_core }}/blog">Blog</a></li>
-      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/meta/contact.html">Contact</a></li>
-      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/meta/community.html">Community</a></li>          
-      <li><a href="{% if site %}{{ site.urls.freya.docs }}{% endif %}/meta/policies.html">Policies</a></li>          
+      <li><a href="{{ theme_core_url }}/blog">Blog</a></li>
+      <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/meta/contact.html">Contact</a></li>
+      <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/meta/community.html">Community</a></li>          
+      <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/meta/policies.html">Policies</a></li>          
     </ul>
     <ul>
       <li><a href="https://xyncro.tech">Xyncro Open Source</a></li>

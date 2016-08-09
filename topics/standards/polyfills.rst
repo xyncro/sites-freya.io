@@ -7,4 +7,4 @@ This enables Freya to drive forward and improve at a fast pace.
 
 For documentation on the polyfills currently available for Freya see the library reference.
 
-* :doc:`/reference/libraries/polyfills/index` -- available polyfills for Freya, providing extensions to standards such as OWIN.
+* :doc:`/reference/polyfills/index` -- available polyfills for Freya, providing extensions to standards such as OWIN.

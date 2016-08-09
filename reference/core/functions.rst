@@ -10,7 +10,7 @@ Doing such a common thing manually would become a chore very quickly. The soluti
    type Freya<'a> =
        State -> Async<'a * State>
 
-In the case of the Hopac variant of the Freya stack -- see :doc:`/topics/general/hopac` -- the type is instead defined as:
+In the case of the Hopac variant of the Freya stack -- see :doc:`/topics/design/hopac` -- the type is instead defined as:
 
 .. code-block:: fsharp
 

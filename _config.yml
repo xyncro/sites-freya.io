@@ -1,3 +1,24 @@
+# Configuration
+
+# freya.io
+
+core:
+  git: https://github.com/xyncro/freya
+  twitter: https://twitter.com/freyafs
+  url: http://localhost:4000
+  # url: https://freya.io
+
+# docs.freya.io
+  
+docs:
+  git: https://github.com/xyncro/freya-www
+  url: http://localhost:8000
+  # url: https://docs.freya.io/en/latest
+
+# Build
+
+markdown: kramdown
+
 # Exclusions
 
 exclude: [
@@ -27,29 +48,3 @@ exclude: [
   tutorials
 
 ]
-
-# URLs
-
-urls:
-  freya:
-    core: http://localhost:4000
-    # core: https://freya.io
-    docs: http://localhost:8000
-    # docs: https://docs.freya.io/en/latest
-    git: https://github.com/xyncro/freya
-    twitter: https://twitter.com/freyafs
-
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-markdown: kramdown

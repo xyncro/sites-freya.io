@@ -1,7 +1,0 @@
-Versions
-========
-
-.. toctree::
-   :glob:
-
-   versions/*

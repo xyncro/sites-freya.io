@@ -6,11 +6,11 @@ Home
 Getting Started
 ---------------
 
-The quickest way to get up and running with Freya and to get a feeling for what programming with Freya is like, is to dive straight in to the :doc:`/topics/getting-started` topic. From zero to a Freya-based Hello World in a few minutes! Once you're ready to move on, you can move on to the more in-depth documentation, as described below...
+The quickest way to get up and running with Freya and to get a feeling for what programming with Freya is like, is to dive straight in to the :doc:`/topics/getting-started/index` topic. From zero to a Freya-based Hello World in a few minutes! Once you're ready to move on, you can move on to the more in-depth documentation, as described below...
 
 .. hint::
 
-   The :doc:`/topics/getting-started` topic is the perfect way to take your first steps with Freya.
+   The :doc:`/topics/getting-started/index` topic is the perfect way to take your first steps with Freya.
 
 Documentation
 -------------
@@ -34,11 +34,9 @@ The documentation for Freya is organized in to categories to help you find what 
    :includehidden:
 
    Overview <topics/index>
-   topics/getting-started
-   topics/general
-   topics/design
-   topics/standards
-   topics/versions
+   topics/getting-started/index.rst
+   topics/design/index.rst
+   topics/standards/index.rst
 
 .. toctree::
    :caption: Reference
@@ -46,8 +44,12 @@ The documentation for Freya is organized in to categories to help you find what 
    :includehidden:
               
    Overview <reference/index>
-   reference/libraries/index
-   reference/integration/index
+   reference/core/index
+   reference/types/index
+   reference/optics/index
+   reference/routers/index
+   reference/machines/index
+   reference/polyfills/index
    
 .. toctree::
    :caption: Recipes

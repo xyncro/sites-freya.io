@@ -11,6 +11,7 @@
 
     > section {
         display: flex;
+        flex: 1;
         margin-top: $d-header-m + $d-header-y + (2 * $d-bar-y);
         width: $d-content-x;
 
@@ -94,6 +95,13 @@
                 &:first-child {
                     margin-top: 0;
                 }
+            }
+
+            // Edit
+
+            .edit {
+                @include links-light;
+                margin: $d-pad-l 0;
             }
             
             // Admonitions
