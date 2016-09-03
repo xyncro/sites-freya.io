@@ -9,7 +9,7 @@ Using the example of the Freya HTTP Machine, this gives:
 
 * **Freya.Machines.Http**
 
-as the name of the core HTTP Machine library. The HTTP Machine also has extensions available to implement further web standards. Following the convention, this gives:
+as the name of the core HTTP Machine library. The HTTP Machine also has extensions available to implement further web standards, or to integrate with other technologies/frameworks. Following the convention, this gives (for example):
 
 * **Freya.Machines.Http.Cors**
 * **Freya.Machines.Http.Patch**

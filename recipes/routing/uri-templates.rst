@@ -9,7 +9,7 @@ The URI Template type library, combined with the **Freya.Routers.Uri.Template** 
 
 .. important::
 
-   The specification of URI Templates is aimed at parts of URIs outside of the path (specific formulations for query strings, fragments, etc.) This means that Freya expects to match a full path and query string. You can make sure this works when you may have a query string by defining a catch-all query string on the end of your route URI Templates like so: ``{?q*}``.
+   The specification of URI Templates is broader than simple path templating and generation, and much of the specification deals with matching query strings, fragments, etc. This means that Freya expects to match a full path and query string. You can make sure this works when you may have an (optional) query string by defining a catch-all query string on the end of your route URI Templates like so: ``{?q*}``.
 
 Lists
 -----

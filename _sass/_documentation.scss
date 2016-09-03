@@ -42,7 +42,7 @@
             }
             
             h3 {
-                font-size: $f-size-m;
+                font-size: $f-size-l - 4px;
             }
             
             // Emphasis
@@ -101,6 +101,11 @@
 
             .edit {
                 @include links-light;
+
+                a {
+                    font-weight: $f-weight-m;
+                }
+
                 margin: $d-pad-l 0;
             }
             

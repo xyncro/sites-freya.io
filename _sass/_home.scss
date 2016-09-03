@@ -128,7 +128,14 @@
         
         .prompt {
             
-            @include flex-column-center;            
+            @include flex-column-center;
+
+            // Paragraphs
+
+            p {                
+                text-align: center;
+                width: 100%;                
+            }
             
             // Links
             
@@ -136,9 +143,11 @@
                 background-color: $c-p2;
                 color: #fff;
                 display: block;
-                margin-top: $d-pad-m;
+                margin: $d-pad-m auto 0 auto;
                 padding: $d-pad-m $d-pad-l;
+                text-align: center;
                 text-decoration: none;
+                width: 300px;
                 
                 &:hover {
                     background-color: $c-p1;               
