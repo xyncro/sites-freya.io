@@ -15,7 +15,6 @@ This set of RFCs covers basic types present in HTTP requests and responses, prin
 .. note::
 
    Full documentation for the individual type designs within Freya.Types.Http is not currently available, but will be added at a later stage. Inspecting the values returned however should be straightforward and logical, and all typed representations map very closely to the logical design/grammar defined within the appropriate RFC or Recommendation.
-To use the types:
    
 To use the types:
 

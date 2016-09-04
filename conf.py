@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Freya'
-copyright = u'2015, Andrew Cherry, Ryan Riley'
+copyright = u'2013-2016, Andrew Cherry, Ryan Riley'
 author = u'Andrew Cherry, Ryan Riley'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -77,7 +77,7 @@ language = None
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['.git', '_*', 'blog']
+exclude_patterns = ['.git', '_*', 'blog', '_site']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.

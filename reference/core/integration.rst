@@ -3,11 +3,7 @@ Integration
 
 As previously detailed, Freya is built on the OWIN open standard for interoperability between .NET web servers and web frameworks (or stacks).
 
-.. attention::
-
-   GitHub issues will need updating.
-
-You should be able to use Freya with any OWIN compatible web server -- if you can't, please `raise an issue <https://github.com/freya-fs/issues>`_ and we'll help you however we can.
+You should be able to use Freya with any OWIN compatible web server -- if you can't, please `raise an issue <https://github.com/xyncro/freya/issues>`_ and we'll help you however we can.
 
 Functions
 ---------

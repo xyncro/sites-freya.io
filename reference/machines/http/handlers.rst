@@ -1,6 +1,11 @@
 Handlers
 ========
 
+.. important::
+
+   This documentation is currently partially complete and is in the process of being written and reviewed. Please check back soon. Documentation updates are also announced on the `Freya Twitter feed <https://twitter.com/freyafs>`_ -- follow Freya there for up to the minute information on changes to this documentation, and other Freya news.
+
+
 Handlers are called as the final step in an HTTP Machine execution -- they are used to set properties of the response, usually a payload (where applicable) and potentially additional headers. Handlers are always optional -- when a handler is not defined, the response will simply be returned without a payload being set (and associated headers). This is a valid approach in many situations, especially in HTTP cases where a payload is not common for the response.
 
 Representations
@@ -27,14 +32,3 @@ Status Codes
 ------------
 
 Handlers are defined and named according to the following tables, categorised by response status code (these codes, along with other commonly recommended/required headers will be set automatically). Note that some status codes may be returned by more than one handler, such as the handlers for a normal **200** response for OPTIONS requests, and for other requests.
-
-2xx
-^^^
-
-+--------+---------------+
-| Status | Handler       |
-+========+===============+
-| 200    | handleOk      |
-+--------+---------------+
-| 200    + handleOptions |
-+--------+---------------+

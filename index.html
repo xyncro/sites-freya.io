@@ -14,7 +14,7 @@ title: Home
 
   <section class="prompt">
     <p>Looking to <strong>dive straight in?</strong></p>
-    <p><a href="{{ site.urls.freya.docs }}/en/latest/topics/getting-started.html">Get Started Now</a></p>
+    <p><a href="{{ site.urls.freya.docs }}/topics/getting-started.html">Get Started Now</a></p>
   </section>
   
   <section class="feature left">
@@ -23,20 +23,24 @@ title: Home
     <div class="highlight">
       <pre><span></span><span class="k">let</span> <span class="nv">ok</span> <span class="o">=</span>
     <span class="k">freya</span> <span class="o">{</span>
-        <span class="k">do</span><span class="o">!</span> <span class="nn">Response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">.=</span> <span class="n">Some</span> <span class="mi">200</span>
-        <span class="k">do</span><span class="o">!</span> <span class="nn">Response</span><span class="p">.</span><span class="n">reasonPhrase</span> <span class="o">.=</span> <span class="n">Some</span> <span class="s">&quot;OK&quot;</span> <span class="o">}</span></pre>
+        <span class="k">do</span><span class="o">!</span> <span class="nv">Response</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">.=</span> <span class="n">Some</span> <span class="mi">200</span>
+        <span class="k">do</span><span class="o">!</span> <span class="nv">Response</span><span class="p">.</span><span class="n">reasonPhrase</span> <span class="o">.=</span> <span class="n">Some</span> <span class="s">&quot;OK&quot;</span> <span class="o">}</span></pre>
     </div>
   </section>
 
   <section class="feature right">
     <h1>Typesafe Modelling</h1>
-    <p>The powerful and comprehensive type systems available with Freya help you build safe and composable application components. Types for HTTP and surrounding standards give you the tools you need to make the most of the web.
-    </p>
+    <p>The powerful and comprehensive type systems available with Freya help you build safe and composable application components. Types for HTTP and surrounding standards give you the tools you need to make the most of the web.</p>
     <div class="highlight">
-      <pre>let ok =
-    freya {
-        do! Response.statusCode .= Some 200
-        do! Response.reasonPhrase .= Some "OK" }</pre>
+      <pre><span></span><span class="k">let</span> <span class="nv">scheme_</span> <span class="o">=</span>
+        <span class="nv">Request</span><span class="p">.</span><span class="n">uri_</span>
+    <span class="o">&gt;-&gt;</span> <span class="nv">Uri</span><span class="p">.</span><span class="n">scheme_</span>
+
+<span class="k">let</span> <span class="nv">isSecure</span> <span class="o">=</span>
+    <span class="k">freya</span> <span class="o">{</span>
+        <span class="k">let!</span> <span class="n">scheme</span> <span class="o">=</span> <span class="nv">Freya</span><span class="p">.</span><span class="nv">Optic</span><span class="p">.</span><span class="n">get</span> <span class="n">scheme_</span>
+
+        <span class="k">return</span> <span class="n">scheme</span> <span class="o">=</span> <span class="n">HTTPS</span> <span class="o">}</span></pre>
     </div>
   </section>
   
@@ -56,7 +60,7 @@ title: Home
 
   <section class="prompt">
     <p>Ready to give Freya a try? You could be <strong>up and running in minutes.</strong></p>
-    <p><a href="{{ site.urls.freya.docs }}/en/latest/topics/getting-started.html">Get Started Now</a></p>
+    <p><a href="{{ site.urls.freya.docs }}/topics/getting-started.html">Get Started Now</a></p>
   </section>
 
   <section class="feature right">
@@ -77,30 +81,29 @@ title: Home
     <p>Design to support building abstractions at successviely higher levels enables building complex applications at the right level of detail and control. Build your own abstractions to boost your productivity.
     </p>
     <div class="highlight">
-      <pre>let routes =
-    freyaRouter {
-        route GET "/" home
-        resource  "/api/users" users
-        resource  "/api/users/{id}" user }</pre>
+      <pre><span></span><span class="k">let</span> <span class="nv">cors</span> <span class="o">=</span>
+    <span class="k">freyaMachine</span> <span class="o">{</span>
+        <span class="k">cors</span>
+        <span class="k">corsEnabled</span> <span class="k">true</span>
+        <span class="k">corsMethods</span> <span class="o">[</span> <span class="n">GET</span><span class="o">;</span> <span class="n">PUT</span> <span class="o">]</span> <span class="o">}</span></pre>
     </div>
   </section>
 
   <section class="feature right">
     <h1>Open Standards and Compatibility</h1>
-    <p>Design to support building abstractions at successviely higher levels enables building complex applications at the right level of detail and control. Build your own abstractions to boost your productivity.
-    </p>
+    <p>A basis on open standards (especially community driven) enables Freya to be compatible with many frameworks and servers. Choose the best tool for specific tasks, make the most of the web.</p>
     <div class="highlight">
-      <pre>let routes =
-    freyaRouter {
-        route GET "/" home
-        resource  "/api/users" users
-        resource  "/api/users/{id}" user }</pre>
+      <pre><span class="k">let</span> <span class="nv">frameworks</span> <span class="o">=</span>
+    <span class="o">[</span> <span class="s">&quot;asp.net&quot;</span><span class="o">;</span> <span class="s">&quot;suave&quot;</span><span class="o">;</span> <span class="o">..</span> <span class="o">]</span>
+
+<span class="k">let</span> <span class="nv">servers</span> <span class="o">=</span>
+    <span class="o">[</span> <span class="s">&quot;kestrel&quot;</span><span class="o">;</span> <span class="s">&quot;iis&quot;</span><span class="o">;</span> <span class="s">&quot;katana&quot;</span><span class="o">;</span> <span class="s">&quot;suave&quot;</span><span class="o">;</span> <span class="o">..</span> <span class="o">]</span></pre>
     </div>
   </section>
 
   <section class="prompt">
     <p>Still <strong>need more convincing?</strong> Come and chat about whether Freya is <strong>right for you...</strong></p>
-    <p><a href="{{ site.urls.freya.docs }}/en/latest/meta/community.html">Talk to the Community</a></p>
+    <p><a href="{{ site.urls.freya.docs }}/meta/community.html">Talk to the Community</a></p>
   </section>
 
 </section>
