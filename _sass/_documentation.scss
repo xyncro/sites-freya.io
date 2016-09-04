@@ -21,13 +21,13 @@
             @include links-normal;
             //line-height: $f-height-m;
             margin-left: $d-pad-m;
-            padding: 40px $d-pad-m; //$d-pad-l $d-pad-m;
+            padding: $d-pad-l $d-pad-m; //$d-pad-l $d-pad-m;
             width: $d-content-x - 300px - (2 * $d-pad-m) - $d-pad-m;
             
             // Headings
             
             h1, h2, h3, h4 {
-                color: #666;
+                color: $c-p2;
                 font-size: $f-size-m;
                 font-weight: $f-weight-m;
                 margin: 0 0 $d-pad-l 0;
