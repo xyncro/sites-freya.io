@@ -156,10 +156,3 @@ Here's the complete code for the Hello World program in one place.
        let _ = Console.ReadLine ()
 
        0
-
-.. toctree::
-   :glob:
-   :hidden:
-   :maxdepth: 1
-
-   *

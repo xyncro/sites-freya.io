@@ -37,7 +37,8 @@ The documentation for Freya is organized in to sections to help you find what yo
    topics/getting-started/index.rst
    topics/design/index.rst
    topics/standards/index.rst
-
+   topics/versioning/index.rst
+   
 .. toctree::
    :caption: Reference
    :hidden:

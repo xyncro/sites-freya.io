@@ -1,0 +1,4 @@
+2.x → 3.x
+=========
+
+This page covers the broad scope of change from 2.x releases of the Freya stack to 3.x releases -- including release candidate (RC) builds.

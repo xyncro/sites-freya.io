@@ -12,5 +12,10 @@ As of 3.0, new packages have been introduced, including for the Freya meta-packa
 
 For more on the packages available and other relevant information, see the [Hopac section][freya-hopac] in the Freya documentation.
 
+<!-- Local -->
+
 [freya-hopac]: https://docs.freya.io/en/latest/topics/general/hopac.html
+
+<!-- Remote -->
+
 [hopac]: https://github.com/Hopac/Hopac
