@@ -2,3 +2,64 @@
 =========
 
 This page covers the broad scope of change from 2.x releases of the Freya stack to 3.x releases -- including release candidate (RC) builds.
+
+Packages
+--------
+
+If you are using the Freya meta-package to manage your dependency on Freya, the new packages should be installed correctly on update, especially if you're using `Paket <https://fsprojects.github.io/Paket>`_.
+
+.. hint::
+
+   In general, `Paket <https://fsprojects.github.io/Paket>`_ comes highly recommended as a reliable way of managing your Nuget -- and other -- dependencies. For this guide however, standard Nuget tools will work well enough.
+
+Libraries
+---------
+   
+Arachne
+^^^^^^^
+
+In versions prior to 3.x, Freya used the Arachne family of libraries as a type system for the web. As of 3.0, the Arachne libraries have been brought under the Freya stack umbrella and renamed the Freya Types libraries. This requires a change to existing code, with ``Arachne.*`` being replaced by ``Freya.Types.*`` -- for example ``open Arachne.Http`` should now be ``open Freya.Types.Http``.
+
+Core
+^^^^
+
+Various changes to functions have taken place within the Freya Core library, all of which come with backward compatible functions with deprecation warnings. The deprecation messages give suggestions for the function to replace the obsolete function with. Most of these function changes have been about simpliying the optic-based programming model, and separating Pipeline functionality from basic Freya functionality.
+
+Optics
+^^^^^^
+
+The previously provided optics in the Freya Lenses libraries have been renamed and moved to the Freya Optics libraries. Namespaces have changed to reflect this, and ``Freya.Lenses.*`` has been replaced by ``Freya.Optics.*``. For example, ``open Freya.Lenses.Http`` should now be ``open Freya.Optics.Http``.
+
+Routers
+^^^^^^^
+
+The router included with Freya prior to 3.x has been moved and renamed to open up the way for additional more specialist routers to become part of the Freya stack. While the basic URI Template based routing has not changed (although the core has been rewritten to be more performant and accurate), the namespace has changed from ``Freya.Router`` to ``Freya.Routers.Uri.Template``. Usage should be unchanged.
+
+The old ``Freya.Machine.Router`` library to add a ``resource`` extension to the router is now included in the URI Template Router by default.
+
+Machines
+^^^^^^^^
+
+As with routers, the machine included with Freya prior to 2.x has been moved and renamed to open up the way for more Machine implementations in future. The machine was previously available in the ``Freya.Machine`` namespace -- this has now been changed to ``Freya.Machines.Http``. The requirement to include HTTP functionality through the use of ``using http`` has been removed.
+
+Machines have gone through a more extensive rewrite than other parts of Freya, and some of the configuration of the HTTP machine has now changed and been simplified. This should all be reflected in deprecated helper methods where applicable, but please do get in :doc:`/meta/contact` if you find areas where this is not the case!
+
+The extension mechanism for machines has also been revamped, as follows:
+
+The CORS support is now available in the namespace ``Freya.Machines.Http.Cors``. It can be enabled for a resource by including the keyword ``cors`` in your machine -- ``using cors`` is no longer needed.
+
+PATCH support is now an extension, and can be found in the namespace ``Freya.Machines.Http.Patch``. It can be enabled by adding the ``patch`` keyword to your machine.
+
+Full details of the new design of HTTP machines can be found in the :doc:`/reference/machines/http/index` machine reference section. Documentation work on Machines is an ongoing process. If the detail you are looking for is not there currently, please check back soon, and follow `Freya on Twitter <https://twitter.com/freyafs>`_ for updates on all Freya subjects, including additions/changes to documentation.
+
+Polyfills
+^^^^^^^^^
+
+Polyfills have been introduced to Freya in 3.x. They allow Freya to work around deficiencies in standards (such as missing data in the OWIN standard) and move faster than current standards allow. They are currently available for Katana based servers and Kestrel. For more information see the reference section on :doc:`/reference/polyfills/index`.
+
+Errors/Omissions?
+-----------------
+
+This document is a work in progress throughout the 3.x release candidate cycle. Please get in :doc:`/meta/contact` if you find any errors or omissions, or if you have any suggestions for how this document can be more useful.
+
+To send a pull request directly, you can use the Edit Page link at the bottom of this (or any other) page.

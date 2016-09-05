@@ -1,7 +1,7 @@
 Meta
 ====
 
-For more "meta" topics around the Freya project and community, see the following sections...
+For more "meta" topics around the Freya project and community (such as contact information, guidance on contributing, etc.) see the following sections:
 
 .. toctree::
    :glob:

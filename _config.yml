@@ -5,15 +5,15 @@
 core:
   git: https://github.com/xyncro/freya
   twitter: https://twitter.com/freyafs
-  url: http://localhost:4000
-  # url: https://freya.io
+  # url: http://localhost:4000
+  url: https://freya.io
 
 # docs.freya.io
   
 docs:
-  git: https://github.com/xyncro/freya-www
-  url: http://localhost:8000
-  # url: https://docs.freya.io/en/latest
+  git: https://github.com/xyncro/sites-freya.io
+  # url: http://localhost:8000
+  url: https://docs.freya.io/en/latest
 
 # Build
 

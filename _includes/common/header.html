@@ -6,9 +6,9 @@
   </h1>
   <nav>
     <ul>
-      <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/topics/getting-started/index.html"{% if pagename == 'topics/getting-started/index' %} class="current"{% endif %}>Getting Started</a></li>
+      <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/tutorials/getting-started.html"{% if pagename == 'tutorials/getting-started' %} class="current"{% endif %}>Getting Started</a></li>
       <li><a href="{{ theme_core_url }}/blog"{% if page %}{% if page.layout == 'blog/base' or page.id %} class="current"{% endif %}{% endif %}>Blog</a></li>
-      <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/"{% if theme_core_url and pagename != 'topics/getting-started/index' and pagename != 'meta/community' %} class="current"{% endif %}>Documentation</a></li>
+      <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/"{% if theme_core_url and pagename != 'tutorials/getting-started' and pagename != 'meta/community' %} class="current"{% endif %}>Documentation</a></li>
       <li><a href="{% if site %}{{ site.docs.url }}{% endif %}/meta/community.html"{% if pagename == 'meta/community' %} class="current"{% endif %}>Community</a></li>
       <li><a href="{% if site %}{{ site.core.git }}{% endif %}{{ theme_core_git }}">Code</a></li>
     </ul>
