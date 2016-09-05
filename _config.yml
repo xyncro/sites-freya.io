@@ -39,6 +39,7 @@ exclude: [
 
   conf.py,
   Makefile,
+  requirements.txt,
 
   index.rst,
   meta,
