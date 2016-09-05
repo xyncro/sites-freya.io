@@ -1,5 +1,5 @@
-Documentation
-=============
+Home
+====
 
 `Freya <https://freya.io>`_ is a functional web programming stack for F#. Freya emphasises expressivity, safety, and correctness and is compatible with most server technologies in the .NET space.
 
