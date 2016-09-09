@@ -1,7 +1,7 @@
 HTTP
 ====
 
-Freya lets you work with HTTP implicitly, using the typed but low-level tools found in :doc:`/reference/core/index` combined with types and optics, such as the provided :doc:`/reference/optics/index`. These are expressive and effective, but provide little in the way of structure.
+Freya lets you work with HTTP implicitly, using the typed but low-level tools found in :doc:`/reference/core/index` combined with types and optics, such as the provided :doc:`/reference/optics/index`. These are expressive and effective, but do not impose a particular structure or semantic form.
 
 HTTP is a fairly involved set of standards, and properly implementing the correct semantics of HTTP is not a trivial matter. Dealing with the correct logical approach to negotiating content types, working out the right approach to cache control and correctly expressing the state of the underlying resources, can be quite a lot to design when taken holistically.
 
