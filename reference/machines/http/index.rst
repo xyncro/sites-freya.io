@@ -7,13 +7,13 @@ HTTP is a fairly involved set of standards, and properly implementing the correc
 
 **Freya.Machines.Http** is designed to solve this. The Machine lets you define just the properties of a resource you care about, and the Machine library handles the rest. You can specify as much or as little as you wish, all in a type safe manner, and be confident that HTTP semantics will remain consistent and correct.
 
-As noted in the topic on the design of :doc:`/topics/design/machines`, configuration of a machine is the key step in effective use. The HTTP Machine has extensive configuration options.
+To begin working with the Freya HTTP machine, it is suggested that reading the topic around the design of :doc:`/topics/design/machines` makes a good entry point. Once you have an initial sense of the machine model, the following sections will should be easier to dive in to.
 
-* :doc:`decisions` -- decisions influence the overall execution of the HTTP Machine, and enable you to define the behaviour of key aspects of your resource by answering true/false questions about the resource.
-* :doc:`handlers` -- handlers enable the response to return representations of the resource when appropriate, as well as providing a potential point in the execution of the Machine to set additional headers, etc.
+* :doc:`overview` -- the basic design and syntax of the Freya HTTP machine.
+* :doc:`configuration` -- the available configuration options as part of the Freya HTTP machine, as introduced in the machine overview.
 
 .. toctree::
    :hidden:
-      
-   decisions
-   handlers
+
+   overview
+   configuration
