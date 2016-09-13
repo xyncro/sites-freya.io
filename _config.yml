@@ -36,6 +36,7 @@ exclude: [
   # Sphinx
 
   _build,
+  _static,
 
   conf.py,
   Makefile,
