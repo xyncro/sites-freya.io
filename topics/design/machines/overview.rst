@@ -20,7 +20,7 @@ Many problems (particularly problems like how to respond to an HTTP request) can
        
    etc. until a suitable response is determined and returned.
 
-As you can see, this is effectively a tree of decisions -- a binary tree. The machine model requires that the logic that needs to be expressed is encoded in this form -- as a tree of decisions, where the leaves represent the action that shoudl result upon reaching the leaf.
+As you can see, this is effectively a tree of decisions -- a binary tree. The machine model requires that the logic that needs to be expressed is encoded in this form -- as a tree of decisions, where the leaves represent the action that should result upon reaching the leaf.
 
 In the case of an HTTP machine, handling an HTTP request, the endpoints would represent response handlers to be invoked, sending the chosen HTTP response back to the client.
 
