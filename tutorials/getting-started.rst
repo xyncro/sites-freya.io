@@ -3,7 +3,7 @@ Getting Started
 
 You can be up and running with Freya in minutes! This quick guide will take you from zero to Hello World, using some of the high level building blocks that Freya provides out of the box -- and tell you where to go to learn more about each of them.
 
-Your Hello World will be completely self contained, and able to greet individuals by name if they provide one -- reverting to a classic Hello World if not. Here's the complete code, before the implementation is broken down:
+Your Hello World will be completely self contained, and able to greet individuals by name if they provide one -- reverting to a classic Hello World if not. It's certainly possible to write this in a simpler way using Freya, but this implementation introduces some of the key Freya building blocks which will be valuable as you build more complex applications. Here's the complete code, before the implementation is broken down:
 
 .. code-block:: fsharp
 
