@@ -14,7 +14,8 @@ The Freya HTTP macine (**Freya.Machines.Http**) is designed to solve this. The M
 To begin working with the Freya HTTP machine, it is suggested that reading the topic around the design of :doc:`/topics/design/machines` makes a good entry point. Once you have an initial sense of the machine model, the following sections will should be easier to dive in to.
 
 * :doc:`overview` -- the basic design and syntax of the Freya HTTP machine.
-* :doc:`configuration` -- the available configuration options as part of the Freya HTTP machine, as introduced in the machine overview.
+* :doc:`model` -- the diagram and implementation of the HTTP machine.
+* :doc:`configuration` -- the available configuration options as part of the Freya HTTP machine, as introduced in the machine overview and model.
 
 .. toctree::
    :hidden:
