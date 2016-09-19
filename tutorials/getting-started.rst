@@ -3,10 +3,55 @@ Getting Started
 
 You can be up and running with Freya in minutes! This quick guide will take you from zero to Hello World, using some of the high level building blocks that Freya provides out of the box -- and tell you where to go to learn more about each of them.
 
+Your Hello World will be completely self contained, and able to greet individuals by name if they provide one -- reverting to a classic Hello World if not. Here's the complete code, before the implementation is broken down:
+
+.. code-block:: fsharp
+
+   open Freya.Core
+   open Freya.Machines.Http
+   open Freya.Routers.Uri.Template
+
+   let name =
+       freya {
+           let! name = Freya.Optic.get (Route.atom_ "name")
+
+           match name with
+           | Some name -> return name
+           | _ -> return "World" }
+
+   let hello =
+       freya {
+           let! name = name
+
+           return Represent.text (sprintf "Hello %s!" name) }
+
+   let machine =
+       freyaMachine {
+           handleOk hello }
+
+   let router =
+       freyaRouter {
+           resource "/hello{/name}" machine }
+
+   type HelloWorld () =
+       member __.Configuration () =
+           OwinAppFunc.ofFreya (router)
+
+   open System
+   open Microsoft.Owin.Hosting
+
+   [<EntryPoint>]
+   let main _ =
+
+       let _ = WebApp.Start<HelloWorld> ("http://localhost:7000")
+       let _ = Console.ReadLine ()
+
+       0
+
 Dependencies
 ------------
 
-You'll be creating a self-contained Hello World implementation as a simple F# console application, so go ahead and create a new empty F# console application. You'll be able to fit the whole thing in the single file that makes up the program (easily!) so there's no need to worry about complex application structures or any of the complexities of frameworks like ASP.NET MVC.
+You'll be creating the Hello World implementation as a simple F# console application, so go ahead and create a new empty F# console application. As you can see above, you can fit the whole thing in the single file that makes up the program (easily!) so there's no need to worry about complex application structures or any of the complexities of frameworks like ASP.NET MVC.
 
 .. hint::
 
@@ -108,51 +153,3 @@ And there you have it! Try hitting `localhost:7000/hello <http://localhost:7000/
    The code for the simple Freya Hello World example can be found in the `freya-examples <https://github.com/xyncro/freya-examples>`_ GitHub repository `here <https://github.com/xyncro/freya-examples/blob/master/src/HelloWorld/Program.fs>`_ - if you have any problems, try cloning and running the pre-built example.
 
 Hopefully now you're keen to learn more about the Freya components you've seen and what more they can do -- and what others are available. The rest of the Freya documentation should help -- and if you find it doesn't, please reach out and suggest improvements -- :doc:`/meta/contact` is a good place to begin.
-
-Full Code Listing
------------------
-
-Here's the complete code for the Hello World program in one place.
-
-.. code-block:: fsharp
-
-   open Freya.Core
-   open Freya.Machines.Http
-   open Freya.Routers.Uri.Template
-
-   let name =
-       freya {
-           let! name = Freya.Optic.get (Route.atom_ "name")
-
-           match name with
-           | Some name -> return name
-           | _ -> return "World" }
-
-   let hello =
-       freya {
-           let! name = name
-
-           return Represent.text (sprintf "Hello %s!" name) }
-
-   let machine =
-       freyaMachine {
-           handleOk hello }
-
-   let router =
-       freyaRouter {
-           resource "/hello{/name}" machine }
-
-   type HelloWorld () =
-       member __.Configuration () =
-           OwinAppFunc.ofFreya (router)
-
-   open System
-   open Microsoft.Owin.Hosting
-
-   [<EntryPoint>]
-   let main _ =
-
-       let _ = WebApp.Start<HelloWorld> ("http://localhost:7000")
-       let _ = Console.ReadLine ()
-
-       0
