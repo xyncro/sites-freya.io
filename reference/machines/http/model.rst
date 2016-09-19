@@ -10,11 +10,7 @@ Diagrams
 
 Clickable diagrams are available (these are generated from the Omnigraffle design documents for the HTTP machine and extensions, maintained as part of the `Freya Machines repository <https://github.com/xyncro/freya-machines>`_):
 
-.. raw:: html
-         
-   <p>
-     <a href="../../../_static/components.core.html" target="_blank">HTTP Model Diagrams</a>
-   </p>
+* `HTTP Model Diagrams <../../../_static/components.core.html>`_
 
 Visualisation
 -------------
@@ -26,8 +22,8 @@ Decisions
 
 Decisions are represented as diamonds, with one ``true`` outcome and one ``false`` outcome. The true outcome is represented by a solid line, and the false outcome by a dashed line.
 
-* **Decisions which may be configured directly** as part of the HTTP machine are coloured green.
-* **Decisions which may be influenced through configuration** but not configured directly are coloured blue.
+* **Decisions which may be configured directly** as part of the HTTP machine are coloured strong blue.
+* **Decisions which may be influenced through configuration** but not configured directly are coloured light blue.
 * **Decisions which may not be configured** are coloured grey.
 
 There is a full reference for the HTTP machine :doc:`configuration/decisions`, as well as a full reference for the :doc:`configuration/properties` which may be configured to influence decisions which are not configured directly.
@@ -35,6 +31,6 @@ There is a full reference for the HTTP machine :doc:`configuration/decisions`, a
 Handlers
 ^^^^^^^^
   
-Handlers are represented by boxes, showing the HTTP Staus Code associated with the handler by default. Colour is used to represent the semantic meaning of the HTTP results returned -- green for 2xx, yellow for 3xx, orange for 4xx and red for 5xx.
+Handlers are represented by boxes, showing the HTTP Staus Code associated with the handler by default. Colour is used to represent the semantic meaning of the HTTP results returned -- green for 2xx, yellow for 3xx, orange for 4xx and dark orange for 5xx.
 
 There is a full reference for the HTTP machine :doc:`configuration/handlers`.
