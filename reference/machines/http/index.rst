@@ -5,7 +5,7 @@ Freya lets you work with HTTP implicitly, using the typed but low-level tools fo
 
 .. hint::
 
-   If you are already familiar with the HTTP machine, and are simply looking for the diagram of the HTTP model, it can be found linked from the :doc:`model` page.
+   If you are already familiar with the HTTP machine, you may be looking to jump straight to the `Reference Diagrams <../../../_static/components.core.html>`_, or to the configuration reference for :doc:`configuration/properties`, :doc:`configuration/decisions` or :doc:`configuration/handlers`.
 
 HTTP is a fairly involved set of standards, and properly implementing the correct semantics of HTTP is not a trivial matter. Dealing with the correct logical approach to negotiating content types, working out the right approach to cache control and correctly expressing the state of the underlying resources, can be quite a lot to design when taken holistically.
 

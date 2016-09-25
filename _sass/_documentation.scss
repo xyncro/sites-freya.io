@@ -108,16 +108,8 @@
                 width: $d-content-x - 300px - $d-pad-m;
 
                 tr {
-                    border: 1px solid #ddd;
+                    // border: 1px solid #ddd;
                     border-left: 2px solid #ddd;
-
-                    &.configure {
-                        border-left-color: #13c4d4;
-                    }
-                    
-                    &.influence {
-                        border-left-color: #92eff7;
-                    }
                 }
 
                 th {
@@ -127,14 +119,65 @@
                 }
 
                 th, td {
+                    border: 1px solid #ddd;
                     padding: $d-pad-s $d-pad-m;
                 }
 
-                td:first-child {
-                    width: 180px;
+                th, td {
+                    &:first-child {
+                        border-left-width: 0px;
+                    
+                        a {
+                            font-weight: $f-weight-m;
+                        }
+                    }
+                }
 
-                    a {
-                        font-weight: $f-weight-m;
+                &.decisions {
+                    td:first-child {
+                        width: 180px;
+                    }
+                    
+                    .configure {
+                        border-left-color: #13c4d4;
+                    }
+                    
+                    .influence {
+                        border-left-color: #92eff7;
+                    }
+                }
+
+                &.handlers {
+                    td:first-child {
+                        width: 240px;
+
+                        &+ td {
+                            width: 60px;
+                        }
+                    }
+                    
+                    .two {
+                        tr {
+                            border-left-color: #13d423;
+                        }
+                    }
+
+                    .three {
+                        tr {
+                            border-left-color: #ffc333;
+                        }
+                    }
+
+                    .four {
+                        tr {
+                            border-left-color: #ff6933;
+                        }
+                    }
+
+                    .five {
+                        tr {
+                            border-left-color: #f40;
+                        }
                     }
                 }
             }

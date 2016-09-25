@@ -10,7 +10,7 @@ Diagrams
 
 Clickable diagrams are available (these are generated from the Omnigraffle design documents for the HTTP machine and extensions, maintained as part of the `Freya Machines repository <https://github.com/xyncro/freya-machines>`_):
 
-* `HTTP Model Diagrams <../../../_static/components.core.html>`_
+* Freya HTTP Machine `Reference Diagrams <../../../_static/components.core.html>`_.
 
 Visualisation
 -------------

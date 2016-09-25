@@ -47,7 +47,7 @@ Assertions decisions handle basic decisions about the state of the system as a w
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -81,7 +81,7 @@ Conflict decisions handle decisions about the resource supplied by the client an
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -105,7 +105,7 @@ Content decisions handle decisions about the resource (and the representation of
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -139,7 +139,7 @@ Existence decisions handle decisions about the resource and whether it currently
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -163,7 +163,7 @@ Method decisions handle decisions about whether the request method matches a spe
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -187,7 +187,7 @@ Negotiations decisions handle decisions about the requested representation (if a
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -246,7 +246,7 @@ Operation decisions are slightly different to ordinary decision, as the operatio
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -275,7 +275,7 @@ Permissions decisions handle basic decisions about the client and whether they a
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -307,7 +307,7 @@ Common precondition decisions handle basic decisions about the resource and the 
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -346,7 +346,7 @@ Safe precondition decisions handle basic decisions about the resource and the kn
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -385,7 +385,7 @@ Unsafe precondition decisions handle basic decisions about the resource and the 
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -417,7 +417,7 @@ Created decisions handle decisions about the resource and whether it was created
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -441,7 +441,7 @@ Commons decisions handle basic decisions about the resource and the representati
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -465,7 +465,7 @@ Moved decisions handle basic decisions about the resource in situations where it
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -499,7 +499,7 @@ Other decisions handle basic decisions about the resource where the resource sho
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
@@ -533,7 +533,7 @@ Validations decisions handle basic decisions about the request and whether it is
 
 .. raw:: html
 
-   <table>
+   <table class="decisions">
      <thead>
        <tr>
          <th>Decision</th>
