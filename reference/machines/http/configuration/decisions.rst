@@ -69,7 +69,7 @@ Assertions decisions handle basic decisions about the state of the system as a w
        <tr class="influence">
          <td><a href="../../../../_static/specifications.assertions.html">methodImplemented</a></td>
          <td>n/a</td>
-         <td>Is the request method implemented/known about? The default implementation will compare the method with the basic sets of core HTTP methods, and any custom methods included in the <code>method</code> property.</td>
+         <td>Is the request method implemented/known about? The default implementation will compare the method with the basic sets of core HTTP methods, and any custom methods included in the <a href="properties.html#methods">methods</a> property.</td>
        </tr>
      </tbody>
    </table>
@@ -127,7 +127,7 @@ Content decisions handle decisions about the resource (and the representation of
        <tr class="influence">
          <td><a href="../../../../_static/specifications.content.html">mediaTypeSupported</a></td>
          <td>n/a</td>
-         <td>Is the media type of the included representation an acceptable media type? The implementation will refer to the <code>acceptableMediaTypes</code> property if it is defined. If the <code>acceptableMediaTypes</code> property is not configured, any media type will be accepted.</td>
+         <td>Is the media type of the included representation an acceptable media type? The implementation will refer to the <a href="properties.html#acceptable-media-types">acceptableMediaTypes</a> property if it is defined. If the <a href="properties.html#acceptable-media-types">acceptableMediaTypes</a> property is not configured, any media type will be accepted.</td>
        </tr>
      </tbody>
    </table>
@@ -175,7 +175,7 @@ Method decisions handle decisions about whether the request method matches a spe
        <tr class="influence">
          <td><a href="../../../../_static/specifications.method.html">methodMatches</a></td>
          <td>n/a</td>
-         <td>Does the request method match the method configured? The decision will always return <code>false</code> (and thus be pruned from the final decision tree) if the method is not configured to be allowed via the <code>methods</code> property if configured or the default methods allowed if not.</td>
+         <td>Does the request method match the method configured? The decision will always return <code>false</code> (and thus be pruned from the final decision tree) if the method is not configured to be allowed via the <a href="properties.html#methods">methods</a> property if configured or the default methods allowed if not.</td>
        </tr>
      </tbody>
    </table>
@@ -204,7 +204,7 @@ Negotiations decisions handle decisions about the requested representation (if a
        <tr class="influence">
          <td><a href="../../../../_static/specifications.negotiation.html">acceptMatches</a></td>
          <td>n/a</td>
-         <td>Is at least one acceptable media type available? The implementation will refer to the <code>availableMediaTypes</code> property if configured, otherwise it is assumed that the server will decide on an appropriately typed representation via a different process.</td>
+         <td>Is at least one acceptable media type available? The implementation will refer to the <a href="properties.html#available-media-types">availableMediaTypes</a> property if configured, otherwise it is assumed that the server will decide on an appropriately typed representation via a different process.</td>
        </tr>
        <tr>
          <td><a href="../../../../_static/specifications.negotiation.html">hasAcceptLanguage</a></td>
@@ -214,7 +214,7 @@ Negotiations decisions handle decisions about the requested representation (if a
        <tr class="influence">
          <td><a href="../../../../_static/specifications.negotiation.html">acceptLanguageMatches</a></td>
          <td>n/a</td>
-         <td>Is at least one acceptable language available? The implementation will refer to the <code>availableLanguages</code> property if configured, otherwise it is assumed that the server will decide on an appropriate language via a different process.</td>
+         <td>Is at least one acceptable language available? The implementation will refer to the <a href="properties.html#available-languages">availableLanguages</a> property if configured, otherwise it is assumed that the server will decide on an appropriate language via a different process.</td>
        </tr>       
        <tr>
          <td><a href="../../../../_static/specifications.negotiation.html">hasAcceptCharset</a></td>
@@ -224,7 +224,7 @@ Negotiations decisions handle decisions about the requested representation (if a
        <tr class="influence">
          <td><a href="../../../../_static/specifications.negotiation.html">acceptCharsetMatches</a></td>
          <td>n/a</td>
-         <td>Is at least one acceptable character set available? The implementation will refer to the <code>availableCharsets</code> property if configured, otherwise it is assumed that the server will decide on an appropriate character set via a different process.</td>
+         <td>Is at least one acceptable character set available? The implementation will refer to the <a href="properties.html#available-character-sets">availableCharsets</a> property if configured, otherwise it is assumed that the server will decide on an appropriate character set via a different process.</td>
        </tr>
        <tr>
          <td><a href="../../../../_static/specifications.negotiation.html">hasAcceptEncoding</a></td>
@@ -234,7 +234,7 @@ Negotiations decisions handle decisions about the requested representation (if a
        <tr class="influence">
          <td><a href="../../../../_static/specifications.negotiation.html">acceptEncodingMatches</a></td>
          <td>n/a</td>
-         <td>Is at least one acceptable encoding available? The implementation will refer to the <code>availableEncodings</code> property if configured, otherwise it is assumed that the server will decide on an appropriate encoding via a different process.</td>
+         <td>Is at least one acceptable encoding available? The implementation will refer to the <a href="properties.html#available-encodings">availableEncodings</a> property if configured, otherwise it is assumed that the server will decide on an appropriate encoding via a different process.</td>
        </tr>
      </tbody>
    </table>
@@ -324,7 +324,7 @@ Common precondition decisions handle basic decisions about the resource and the 
        <tr class="influence">
          <td><a href="../../../../_static/specifications.preconditions.html">ifMatchMatches</a></td>
          <td>n/a</td>
-         <td>Does the if-match value supplied match an Entity Tag given for the resource? The implementation will refer to the <code>entityTag</code> property if configured, otherwise it will assume a successful match.</td>
+         <td>Does the if-match value supplied match an Entity Tag given for the resource? The implementation will refer to the <a href="properties.html#entity-tag">entityTag</a> property if configured, otherwise it will assume a successful match.</td>
        </tr>
        <tr>
          <td><a href="../../../../_static/specifications.preconditions.html">hasIfUnmodifiedSince</a></td>
@@ -334,7 +334,7 @@ Common precondition decisions handle basic decisions about the resource and the 
        <tr class="influence">
          <td><a href="../../../../_static/specifications.preconditions.html">ifUnmodifiedSinceMatches</a></td>
          <td>n/a</td>
-         <td>Does the if-unmodified-since value supplied match an last modified time given for the resource? The implementation will refer to the <code>lastModified</code> property if configured, otherwise it will assume a successful match.</td>
+         <td>Does the if-unmodified-since value supplied match an last modified time given for the resource? The implementation will refer to the <a href="properties.html#last-modified">lastModified</a> property if configured, otherwise it will assume a successful match.</td>
        </tr>
      </tbody>
    </table>
@@ -363,7 +363,7 @@ Safe precondition decisions handle basic decisions about the resource and the kn
        <tr class="influence">
          <td><a href="../../../../_static/specifications.preconditions.html">ifNoneMatchMatches</a></td>
          <td>n/a</td>
-         <td>Does the if-none-match value supplied (not) match any Entity Tags given for the resource? The implementation will refer to the <code>entityTag</code> property if configured, otherwise it will assume a successful (non-)match.</td>
+         <td>Does the if-none-match value supplied (not) match any Entity Tags given for the resource? The implementation will refer to the <a href="properties.html#entity-tag">entityTag</a> property if configured, otherwise it will assume a successful (non-)match.</td>
        </tr>
        <tr>
          <td><a href="../../../../_static/specifications.preconditions.html">hasIfModifiedSince</a></td>
@@ -373,7 +373,7 @@ Safe precondition decisions handle basic decisions about the resource and the kn
        <tr class="influence">
          <td><a href="../../../../_static/specifications.preconditions.html">ifModifiedSinceMatches</a></td>
          <td>n/a</td>
-         <td>Does the if-modified-since value supplied match an last modified time given for the resource? The implementation will refer to the <code>lastModified</code> property if configured, otherwise it will assume a successful match.</td>
+         <td>Does the if-modified-since value supplied match an last modified time given for the resource? The implementation will refer to the <a href="properties.html#last-modified">lastModified</a> property if configured, otherwise it will assume a successful match.</td>
        </tr>
      </tbody>
    </table>
@@ -402,7 +402,7 @@ Unsafe precondition decisions handle basic decisions about the resource and the 
        <tr class="influence">
          <td><a href="../../../../_static/specifications.preconditions.html">ifNoneMatchMatches</a></td>
          <td>n/a</td>
-         <td>Does the if-none-match value supplied (not) match any Entity Tags given for the resource? The implementation will refer to the <code>entityTag</code> property if configured, otherwise it will assume a successful (non-)match.</td>
+         <td>Does the if-none-match value supplied (not) match any Entity Tags given for the resource? The implementation will refer to the <a href="properties.html#entity-tag">entityTag</a> property if configured, otherwise it will assume a successful (non-)match.</td>
        </tr>
      </tbody>
    </table>
@@ -550,7 +550,7 @@ Validations decisions handle basic decisions about the request and whether it is
        <tr class="influence">
          <td><a href="../../../../_static/specifications.validations.html">methodAllowed</a></td>
          <td>true</td>
-         <td>Is the request method allowed for this resource? The implementation will refer to the <code>methods</code> property if configured, or the default set of methods if not.</td>
+         <td>Is the request method allowed for this resource? The implementation will refer to the <a href="properties.html#methods">methods</a> property if configured, or the default set of methods if not.</td>
        </tr>
        <tr class="configure">
          <td><a href="../../../../_static/specifications.validations.html">uriTooLong</a></td>
