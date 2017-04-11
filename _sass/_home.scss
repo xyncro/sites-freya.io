@@ -153,6 +153,12 @@
                     background-color: $c-p1;               
                 }
             }
+
+            .highlight {
+                pre {
+                    margin: 2em 0em 0em;
+                }
+            }
         }
     }
 }

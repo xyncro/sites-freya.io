@@ -67,6 +67,7 @@ Using your preferred method of managing Nuget dependencies, install the required
    PM> Install-Package Microsoft.Owin.SelfHost
 
 The Freya package is a meta-package -- it brings in all of the packages you'll need for a common Freya application.
+Note that the current samples work with v3 of Freya, which is currently a prerelease package. You'll need to specify this when downloading Freya. For example, with Paket you should use ``nuget freya prerelease`` rather than simply ``nuget freya``.
 
 Code
 ----
