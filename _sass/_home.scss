@@ -9,9 +9,9 @@
 .home {
 
     // Splash
-    
+
     .splash {
-        @include flex-column-center;        
+        @include flex-column-center;
         background-image: linear-gradient($c-p1, $c-p2);
         color: $c-bg;
         height: 400px;
@@ -19,44 +19,44 @@
         padding: $d-pad-m 0 (($d-header-m + $d-header-y) / 2) 0;
         text-transform: lowercase;
         width: 100%;
-        
+
         // Headers
 
         @mixin glow($radius) {
             text-shadow: 0 0 $radius rgba(255, 255, 255, 0.3);
         }
-        
+
         h1 {
-            @include glow(20px);            
+            @include glow(20px);
             font-family: $f-family-mono;
             font-size: 100px;
             font-weight: $f-weight-m;
             margin-bottom: $d-pad-l + $d-pad-m;
-            
+
             &:after {
                 content: " {...}";
             }
         }
-        
+
         h2 {
-            @include glow(5px);            
+            @include glow(5px);
             font-size: $f-size-l;
             font-weight: $f-weight-l;
             line-height: $d-pad-l;
             text-align: center;
-            
+
             strong {
                 font-weight: $f-weight-h;
             }
         }
     }
-    
+
     // Features
 
     .features {
         @include flex-column-center;
         flex: 1;
-        
+
         // Feature/Prompt
 
         .feature, .prompt {
@@ -71,24 +71,24 @@
         }
 
         // Feature
-        
+
         .feature {
-            
+
             // Headings
-            
+
             h1 {
                 color: $c-p2;
                 font-size: $f-size-xl;
                 font-weight: $f-weight-m;
-                margin-bottom: $d-pad-m;                
+                margin-bottom: $d-pad-m;
             }
-                        
+
             // Paragraphs/Highlight
-            
+
             p, .highlight {
                 width: ($d-content-x / 2) - (2 * $d-pad-m) - $d-pad-m;
             }
-            
+
             pre {
                 font-family: $f-family-code;
                 font-size: 13px;
@@ -97,7 +97,7 @@
                 margin: 0;
                 padding: 3px 0 0 0;
             }
-            
+
             // Alternation
 
             @mixin alternate($d1, $d2) {
@@ -112,33 +112,33 @@
 
                 .highlight {
                     float: $d2;
-                }                    
+                }
             }
-            
+
             &.left {
                 @include alternate(left, right);
             }
-            
+
             &.right {
                 @include alternate(right, left);
             }
         }
 
         // Prompt
-        
+
         .prompt {
-            
+
             @include flex-column-center;
 
             // Paragraphs
 
-            p {                
+            p {
                 text-align: center;
-                width: 100%;                
+                width: 100%;
             }
-            
+
             // Links
-            
+
             a {
                 background-color: $c-p2;
                 color: #fff;
@@ -148,15 +148,22 @@
                 text-align: center;
                 text-decoration: none;
                 width: 300px;
-                
+
                 &:hover {
-                    background-color: $c-p1;               
+                    background-color: $c-p1;
                 }
             }
 
             .highlight {
+                @include flex-column-center;
+
+                background-color: darken($c-bg, 4%);
+                border: 1px solid darken($c-bg, 10%);
+                margin: $d-pad-m 0 0 0;
+                width: $d-content-x;
+
                 pre {
-                    margin: 2em 0em 0em;
+                    font-weight: $f-weight-h;
                 }
             }
         }
