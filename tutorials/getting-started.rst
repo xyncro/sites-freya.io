@@ -82,7 +82,7 @@ At this point you should have an empty F# program. Start off by opening some com
 
 Greeting
 ^^^^^^^^
-   
+
 Now you're ready to implement the Freya part of your Hello World application. Start by creating these two functions:
 
 .. code-block:: fsharp
@@ -133,7 +133,7 @@ Now that you have all the "logic" covered you'll need a way of serving it. You c
 .. code-block:: fsharp
 
    type HelloWorld () =
-       member __.Configure () =
+       member __.Configuration () =
            OwinAppFunc.ofFreya (router)
 
    open System
