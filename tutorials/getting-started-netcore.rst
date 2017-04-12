@@ -49,31 +49,30 @@ before the implementation is broken down:
     open Freya.Types.Http
     open Freya.Routers.Uri.Template
 
-    let routeName_ = Route.atom_ "name"
+    let name_ = Route.atom_ "name"
 
-    let name = freya {
-      let! nameO = Freya.Optic.get routeName_
+    let name =
+        freya {
+            let! name = Freya.Optic.get name_
 
-      match nameO with
-      | Some name -> return name
-      | None -> return "World"
-    }
+            match name with
+            | Some name -> return name
+            | None -> return "World" }
 
-    let sayHello = freya {
-      let! name = name
+    let sayHello =
+        freya {
+            let! name = name
 
-      return Represent.text (sprintf "Hello, %s!" name)
-    }
+            return Represent.text (sprintf "Hello, %s!" name) }
 
-    let helloMachine = freyaMachine {
-      methods [GET; HEAD; OPTIONS]
+    let helloMachine =
+        freyaMachine {
+            methods [GET; HEAD; OPTIONS]
+            handleOk sayHello }
 
-      handleOk sayHello
-    }
-
-    let root = freyaRouter {
-      resource "/hello{/name}" helloMachine
-    }
+    let root =
+        freyaRouter {
+            resource "/hello{/name}" helloMachine }
 
 Dependencies
 ------------
@@ -101,25 +100,25 @@ The next section deals with the core ``freya`` construct, and is broken into thr
 
 .. code-block:: fsharp
 
-    let routeName_ = Route.atom_ "name"
+    let name_ = Route.atom_ "name"
 
-    let name = freya {
-      let! nameO = Freya.Optic.get routeName_
+    let name =
+        freya {
+            let! name = Freya.Optic.get name_
 
-      match nameO with
-      | Some name -> return name
-      | None -> return "World"
-    }
+            match name with
+            | Some name -> return name
+            | None -> return "World" }
 
-    let sayHello = freya {
-      let! name = name
+    let sayHello =
+        freya {
+            let! name = name
 
-      return Represent.text (sprintf "Hello, %s!" name)
-    }
+            return Represent.text (sprintf "Hello, %s!" name) }
 
-The first line defines a constant lens that inspects the route of the request for a component named ``{name}`` and provides a view that makes it easy to access.
+The first line defines a constant prism that inspects the route of the request for a component named ``{name}`` and provides a view that makes it easy to access.
 
-In the second definition, we use that lens to extract the name from the route. We then return either ``{name}`` or ``World`` depending on whether ``{name}`` was present in the route.
+In the second definition, we use that prism to extract the name from the route. We then return either ``{name}`` or ``World`` depending on whether ``{name}`` was present in the route.
 
 The third definition binds it all together, extracting the name and returning a representation of ``Hello [World|{name}]``. A representation is an important construct that binds together the data with its description, in this case :mimetype:`text/plain` in UTF-8 encoding.
 
@@ -132,11 +131,10 @@ Now we need some way of handling a request and using ``sayHello`` to return the 
 
 .. code-block:: fsharp
 
-    let helloMachine = freyaMachine {
-      methods [GET; HEAD; OPTIONS]
-
-      handleOk sayHello
-    }
+    let helloMachine =
+        freyaMachine {
+            methods [GET; HEAD; OPTIONS]
+            handleOk sayHello }
 
 Router
 ^^^^^^
@@ -145,14 +143,14 @@ Finally, we need a way to make sure that requests to the appropriate path(s) end
 
 .. code-block:: fsharp
 
-    let root = freyaRouter {
-      resource "/hello{/name}" helloMachine
-    }
+    let root =
+        freyaRouter {
+            resource "/hello{/name}" helloMachine }
 
 Server
 ------
 
-Now that all the "logic" has been covered we need a way of serving it. The template project provides :file:``KetrelInterop.fs`` which makes interoperating with Kestrel from F# a bit easier. Everything comes together in :file:``Program.fs``, which takes care of starting up the web server and configuring it to use our router as the API root.
+Now that all the "logic" has been covered we need a way of serving it. The template project provides :file:``KestrelInterop.fs`` which makes interoperating with Kestrel from F# a bit easier. Everything comes together in :file:``Program.fs``, which takes care of starting up the web server and configuring it to use our router as the API root.
 
 .. code-block:: fsharp
 
@@ -161,7 +159,7 @@ Now that all the "logic" has been covered we need a way of serving it. The templ
     open KestrelInterop
 
     [<EntryPoint>]
-    let main argv =
+    let main _ =
       let configureApp =
         ApplicationBuilder.useFreya Api.root
 
