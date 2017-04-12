@@ -177,6 +177,7 @@ Now that we've gone over the pieces of our initial Freya application, we need to
 
 .. code-block:: shell
 
+    dotnet restore
     dotnet run
 
 And there you have it! After a few moments, the server will be ready to respond to requests. Try hitting `localhost:5000/hello <http://localhost:5000/hello>`_ or `localhost:5000/hello/name <http://localhost:5000/hello/name>`_ in a browser -- you should have a Hello World up and running.
