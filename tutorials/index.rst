@@ -1,7 +1,9 @@
 Tutorials
 =========
 
-For now, see the :doc:`getting-started` tutorial to create your first Freya application.
+Are you running on .NET Core? Then check out the :doc:`getting-started-netcore` tutorial to get a quick start on your first Freya application.
+
+If you're still running on the .NET Framework, check out :doc:`getting-started` on Katana.
 
 .. note::
 

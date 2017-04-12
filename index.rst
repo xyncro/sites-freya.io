@@ -6,11 +6,11 @@ Home
 Getting Started
 ---------------
 
-The quickest way to get up and running with Freya and to get a feeling for what programming with Freya is like, is to dive straight in to the :doc:`/tutorials/getting-started` tutorial. From zero to a Freya-based Hello World in a few minutes! Once you're ready to move on, you can move on to the more in-depth documentation, as described below...
+The quickest way to get up and running with Freya and to get a feeling for what programming with Freya is like, is to dive straight in to the :doc:`/tutorials/getting-started-netcore` tutorial. From zero to a Freya-based Hello World in a few minutes! Once you're ready to move on, you can move on to the more in-depth documentation, as described below...
 
 .. hint::
 
-   The :doc:`/tutorials/getting-started` tutorial is the perfect way to take your first steps with Freya.
+   The :doc:`/tutorials/getting-started-netcore` tutorial is the perfect way to take your first steps with Freya.
 
 Sections
 --------
