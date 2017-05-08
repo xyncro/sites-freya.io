@@ -21,7 +21,7 @@ Before we get started, you will want to install the Freya project templates for
 
 .. code-block:: shell
 
-    dotnet new --install Freya.Template::*
+    dotnet new --install "Freya.Template::*"
 
 This process will take a few minutes to install the templates on your host,
 after which, you can create a Freya project by simply typing
