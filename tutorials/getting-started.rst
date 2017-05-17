@@ -63,7 +63,7 @@ Using your preferred method of managing Nuget dependencies, install the required
 
 .. code-block:: shell
 
-   PM> Install-Package Freya
+   PM> Install-Package Freya -Pre
    PM> Install-Package Microsoft.Owin.SelfHost
 
 The Freya package is a meta-package -- it brings in all of the packages you'll need for a common Freya application.
