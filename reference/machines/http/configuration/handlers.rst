@@ -88,7 +88,7 @@ The ``Acceptable`` type gives enough information to determine an appropriate rep
         | Acceptable of 'a list
         | Free
 
-Using the information contained within the ``Acceptable`` type, and the individual ``Acceptance<_>`` value for each negotiable aspect, the handler can determine the representation to send, and construct it approrpriately. The ``Acceptable`` case of the ``Acceptance<_>`` type is an **ordered** list of matched values, with the most preferred first.
+Using the information contained within the ``Acceptable`` type, and the individual ``Acceptance<_>`` value for each negotiable aspect, the handler can determine the representation to send, and construct it appropriately. The ``Acceptable`` case of the ``Acceptance<_>`` type is an **ordered** list of matched values, with the most preferred first.
 
 Usage of the the negotiated dynamic handler is similar to the dynamic handler, but with the opportunity to determine the most appropriate representation after content negotiation.
 
