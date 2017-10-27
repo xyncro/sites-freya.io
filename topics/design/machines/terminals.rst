@@ -1,7 +1,7 @@
 Terminals
 =========
 
-In the :doc:`overview` section, the machine model was described as being a tree of decisions, where the leaves represented the action that should result when reaching the appropriate leaf. In the Hephaestus implementation, the leaves are referred to as terminals, although different names may be used when taling about specific machines -- in the HTTP example (and the Freya HTTP machine) they are referred to as handlers, in line with the traditional term "response handler".
+In the :doc:`overview` section, the machine model was described as being a tree of decisions, where the leaves represented the action that should result when reaching the appropriate leaf. In the Hephaestus implementation, the leaves are referred to as terminals, although different names may be used when talking about specific machines -- in the HTTP example (and the Freya HTTP machine) they are referred to as handlers, in line with the traditional term "response handler".
 
 As with decisions, there is slightly more to them than just a simple function.
 
