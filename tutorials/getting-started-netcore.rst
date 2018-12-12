@@ -32,7 +32,7 @@ after which, you can create a Freya project by simply typing
 
 .. hint::
 
-    By default, the Freya template will use the ``Async`` construct from ``FSharp.Core``. If you want to use the ``Job`` construct from `Hopac <https://hopac.github.io/Hopac/Hopac.html>`_, then create the project using ``dotnet new freya -f hopac``.
+    By default, the Freya template will use the ``Async`` construct from ``FSharp.Core``. If you want to use the ``Job`` construct from `Hopac <https://hopac.github.io/Hopac/Hopac.html>`_, then create the project using ``dotnet new freya -c hopac``.
 
 This will create a basic Freya project for you, including four files. :file:`Api.fs`,
 :file:`KestrelInterop.fs`, :file:`Program.fs`, and a :file:`{Freya}.fsproj` file.
