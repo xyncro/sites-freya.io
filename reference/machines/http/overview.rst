@@ -8,7 +8,7 @@ Syntax
 
 The first thing to note is that as with the Freya URI Template Router, the configuration of the HTTP machine is done using a moderately declarative computation expression syntax. This allows for configuration to be readable while also taking advantage of some features of the F# type system to allow for concision where possible.
 
-To create a simple HTTP machine, which models and HTTP resource, you can use the computation expression, ``freyaHttpMachine`` -- also aliased as ``freyaMachine`` for convenience:
+To create a simple HTTP machine, which models an HTTP resource, you can use the computation expression, ``freyaHttpMachine`` -- also aliased as ``freyaMachine`` for convenience:
 
 .. code-block:: fsharp
 
